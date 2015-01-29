@@ -1,0 +1,88 @@
+.navbar-header {
+  margin-top: -10px;
+  margin-bottom: -20px;
+}
+.navbar-header h6 {
+  color: #ccc;
+}
+a.navbar-brand {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.navbar-toggle {
+  margin-top: 20px;
+}
+.navbar-collapse {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+footer {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+footer p {
+  border-top: 1px solid #d7e0e2;
+}
+.navbar-form .form-group {
+  margin-left: 10px;
+}
+.navbar-form button {
+  margin-left: 10px;
+}
+.top-padding-med {
+  padding-top: 10px;
+}
+.margin-left-med {
+  margin-left: 10px;
+}
+.toast-top-right {
+  top: 70px;
+}
+.toast-success {
+  background-color: #13987e;
+}
+.pager .previous > a,
+.pager .previous > span {
+  float: none;
+  visibility: hidden;
+  display: none;
+}
+.pager .next > a,
+.pager .next > span {
+  float: left;
+}
+body {
+  padding-top: 120px;
+}
+/** Modified Responsive CSS **/
+@viewport {
+  zoom: 1;
+  width: extend-to-zoom;
+}
+@-ms-viewport {
+  width: extend-to-zoom;
+  zoom: 1;
+}
+.star-featured-topic {
+  color: #337ab7;
+}
+#inline-list {
+  border: 1px solid #000;
+  margin: 2em;
+  width: 80%;
+  padding: 5px;
+}
+#inline-list p {
+  display: inline;
+}
+#inline-list ul,
+#inline-list li {
+  display: inline;
+  margin: 0;
+  padding: 0;
+  color: #339;
+  font-weight: bold;
+}
+.error {
+  color: #f00;
+}
