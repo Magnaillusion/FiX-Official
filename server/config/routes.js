@@ -21,8 +21,29 @@ module.exports = function(app, passport) {
 
     
     app.post('/signup', passport.authenticate('local-signup', {
-        successRedirect : '/profile', // redirect to the secure profile section
-        failureRedirect : '/signup', // redirect back to the signup page if there is an error
-        failureFlash : true // allow flash messages
+        successRedirect : '/profile',
+        failureRedirect : '/signup',
+        failureFlash : true
     }));
+
+    app.post('/login', passport.authenticate('local-login', {
+        successRedirect : '/',
+        failureRedirect : '/login',
+        failureFlash : true
+    }));
+
+	app.get('/profile', auth.isLoggedIn, function(req, res) {
+		res.render('../../public/app/' + req.params[0], {
+			user : req.user // get the user out of session and pass to template
+		});
+	});
+
+	// =====================================
+	// LOGOUT ==============================
+	// =====================================
+	app.get('/logout', function(req, res) {
+		req.logout();
+		res.redirect('/');
+	});
+
 };

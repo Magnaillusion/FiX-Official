@@ -26,8 +26,12 @@ angular.module('app').config(function($routeProvider, $locationProvider, $httpPr
             controller: 'quizController'
         })
         .when('/signup', {
-            templateUrl: '/partials/partials/signup',
+            templateUrl: '/partials/partials/signupPartial',
             controller: 'signupController'
+        })
+        .when('/login', {
+            templateUrl: '/partials/partials/loginPartial',
+            controller: 'loginController'
         })
         .when('/profile', {
             templateUrl: '/partials/partials/profilePartial',

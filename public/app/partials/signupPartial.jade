@@ -6,7 +6,7 @@
 		hr
 		form(novalidate='', action="/signup", method="post", name="signup_form")
 			.form-group.has-feedback
-				label Full name
+				label Name
 				input.form-control(autocomplete="off", type="text", name="name", ng-model="newUser.fullName", ng-minlength='{{minLenName}}', ng-maxlength='{{maxLenName}}', required)
 				span.glyphicon.glyphicon-ok.form-control-feedback.btn-primary(aria-hidden="true", ng-show='!signup_form.name.$error.required && !signup_form.name.$error.minlength && !signup_form.name.$error.maxlength')
 				div(ng-show='signup_form.name.$dirty && signup_form.name.$invalid')
@@ -16,6 +16,17 @@
 						| Your name is required to be at least {{minLenName}} characters.
 					span.help-block(ng-show='signup_form.name.$error.maxlength')
 						| Your name cannot be longer than {{maxLenName}} characters
+			.form-group.has-feedback
+				label Last name
+				input.form-control(autocomplete="off", type="text", name="lastName", ng-model="newUser.lastName", ng-minlength='{{minLenLastName}}', ng-maxlength='{{maxLenLastName}}', required)
+				span.glyphicon.glyphicon-ok.form-control-feedback.btn-primary(aria-hidden="true", ng-show='!signup_form.lastName.$error.required && !signup_form.lastName.$error.minlength && !signup_form.lastName.$error.maxlength')
+				div(ng-show='signup_form.lastName.$dirty && signup_form.lastName.$invalid')
+					span.error.help-block(ng-show='signup_form.lastName.$error.required')
+						| Your last name is required.
+					span.help-block(ng-show='signup_form.lastName.$error.minlength')
+						| Your last name is required to be at least {{minLenLastName}} characters.
+					span.help-block(ng-show='signup_form.lastName.$error.maxlength')
+						| Your last name cannot be longer than {{maxLenLastName}} characters
 			.form-group.has-feedback
 				label Email
 				input.form-control(autocomplete="off", type="email", name="email", ng-model="newUser.email", ng-minlength='{{minLenEmail}}', ng-maxlength='{{maxLenEmail}}', required)
@@ -42,8 +53,11 @@
 						| Your password cannot be longer than {{maxLenPassword}} characters
 			button.btn.btn-warning(type="submit", ng-disabled="signup_form.$invalid")
 				| Sign up
-		hr		 
+			#message
+				if message
+					h1.text-center.error-message #{message}
+		hr		
 		p Already have an account? 
 			a(href='/login') Login	 
 		p Or go 
-			a(href='/') Home
+			a(href='/') home
