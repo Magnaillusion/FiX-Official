@@ -1,49 +1,35 @@
-var auth = require("./auth");
-var topics = require("../controllers/topicController");
-var quiz = require("../controllers/quizController");
+var authController = require("../controllers/authController");
+var topicsController = require("../controllers/topicController");
+var quizController = require("../controllers/quizController");
+var userController = require("../controllers/userController");
 
+module.exports = function(app) {
 
-module.exports = function(app, passport) {
+  app.get('/api/users', authController.requiresRole('admin'), userController.getUsers);
+  app.post('/api/users', userController.createUser);
+  app.put('/api/users', userController.updateUser);
 
-	app.get('/api/topics/practices', quiz.getQuices);
-	app.get('/api/topics/practices/:topic', quiz.getQuizByTopic);
-	app.get('/api/topics', topics.getTopics);
-	app.get('/api/topics/:id', topics.getTopicsById);
-	app.get('/partials/*', function(req, res) {
-		res.render('../../public/app/' + req.params[0]);
-	});
-	app.all('/api/*', function(req, res){
-		res.sendStatus(404);
-	});
-	app.get('*', function(req, res) {
-		res.render('index');
-	});
+  app.get('/api/topics/practices', quizController.getQuices);
+  app.get('/api/topics/practices/:topic', quizController.getQuizByTopic);
+  app.get('/api/topics', topicsController.getTopics);
+  app.get('/api/topics/:id', topicsController.getTopicsById);
+  app.get('/partials/*', function(req, res) {
+    res.render('../../public/app/' + req.params[0]);
+  });
+  app.all('/api/*', function(req, res) {
+    res.sendStatus(404);
+  });
 
-    
-    app.post('/signup', passport.authenticate('local-signup', {
-        successRedirect : '/profile',
-        failureRedirect : '/signup',
-        failureFlash : true
-    }));
+  app.post('/signin', authController.authenticate);
+  app.post('/logout', function(req, res) {
+    req.logout();
+    res.end();
+  });
 
-    app.post('/login', passport.authenticate('local-login', {
-        successRedirect : '/',
-        failureRedirect : '/login',
-        failureFlash : true
-    }));
-
-	app.get('/profile', auth.isLoggedIn, function(req, res) {
-		res.render('../../public/app/' + req.params[0], {
-			user : req.user // get the user out of session and pass to template
-		});
-	});
-
-	// =====================================
-	// LOGOUT ==============================
-	// =====================================
-	app.get('/logout', function(req, res) {
-		req.logout();
-		res.redirect('/');
-	});
+  app.get('*', function(req, res) {
+    res.render('index', {
+      bootstrappedUser: req.user
+    });
+  });
 
 };

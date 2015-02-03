@@ -44,6 +44,71 @@ function createDefaultQuices() {
                     type: "Multichoice",
                     choices: ["Yahoo!", "Google", "AngularJS.org", "Microsoft"],
                     answers: [2]
+                },
+                {
+                    _id: 3,
+                    question: "AngularJS is written completely in JavaScript?",
+                    type: "True-False",
+                    choices: ["True", "False"],
+                    answers: [1]
+                }, {
+                    _id: 4,
+                    question: "AngularJS 1.0 was released in 2013?",
+                    type: "Multichoice",
+                    choices: ["Yahoo!", "Google", "AngularJS.org", "Microsoft"],
+                    answers: [2]
+                },
+                {
+                    _id: 5,
+                    question: "AngularJS is written completely in JavaScript?",
+                    type: "True-False",
+                    choices: ["True", "False"],
+                    answers: [1]
+                }, {
+                    _id: 6,
+                    question: "AngularJS 1.0 was released in 2013?",
+                    type: "Multichoice",
+                    choices: ["Yahoo!", "Google", "AngularJS.org", "Microsoft"],
+                    answers: [2]
+                },
+                {
+                    _id: 7,
+                    question: "AngularJS is written completely in JavaScript?",
+                    type: "True-False",
+                    choices: ["True", "False"],
+                    answers: [1]
+                }, {
+                    _id: 8,
+                    question: "AngularJS 1.0 was released in 2013?",
+                    type: "Multichoice",
+                    choices: ["Yahoo!", "Google", "AngularJS.org", "Microsoft"],
+                    answers: [2]
+                },
+                {
+                    _id: 9,
+                    question: "AngularJS is written completely in JavaScript?",
+                    type: "True-False",
+                    choices: ["True", "False"],
+                    answers: [1]
+                }, {
+                    _id: 10,
+                    question: "AngularJS 1.0 was released in 2013?",
+                    type: "Multichoice",
+                    choices: ["Yahoo!", "Google", "AngularJS.org", "Microsoft"],
+                    answers: [2]
+                },
+                {
+                    _id: 11,
+                    question: "AngularJS is written completely in JavaScript?",
+                    type: "True-False",
+                    choices: ["True", "False"],
+                    answers: [1]
+                }, {
+                    _id: 12,
+                    question: "AngularJS 1.0 was released in 2013?",
+                    type: "Multichoice",
+                    choices: ["Yahoo!", "Google", "AngularJS.org", "Microsoft"],
+                    answers: [2]
                 }],
                 tags: ["Newton laws"]
             });

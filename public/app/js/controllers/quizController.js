@@ -1,6 +1,6 @@
 angular.module('app').controller('quizController', function($scope, $window, quizResource, notifierService, $routeParams, $log) {
 
-    $scope.maxSize = 5;
+    $scope.maxSize = 3;
     $scope.quizQuestions = [];
     $scope.results = [];
     $scope.currentQuestion = undefined;

@@ -1,59 +1,26 @@
-//- .nav.navbar-right(ng-controller="navBarLoginController")
-//- 	form.navbar-form(ng-hide="identity.isAuthenticated()")
-//- 		ul.nav.navbar-nav
-//- 			li
-//- 				a(href="/signup") Sign up
-//- 		.form-group
-//- 			input.form-control(placeholder="Email", ng-model="username")
-//- 		.form-group
-//- 			input.form-control(type="password", placeholder="Password", ng-model="password")
-//- 		button.btn.btn-primary(ng-click="signin(username, password)") Sign In
-
 .nav.navbar-right(ng-controller="navBarLoginController")
 	form.navbar-form(ng-hide="identity.isAuthenticated()")
 		.form-group
-			a.btn.btn-primary(style="background-color:black", href="/signup")
+			a.btn.btn-primary(style="background-color:black", href="/signup", ng-hide="identity.isAuthenticated()")
 				span(style="color:white")
 				| &nbsp; Sign up&nbsp;
 		.form-group
-			a.btn.btn-primary(href="/login")
+			a.btn.btn-primary(href="/signin", ng-hide="identity.isAuthenticated()")
 				span.glyphicon.glyphicon-log-in(style="color:white")
 				| &nbsp;Sign in
 
+	ul.nav.navbar-nav.navbar-right(ng-show="identity.isAuthenticated()")
+		li.dropdown
+			a.dropdown-toggle(href="", data-toggle="dropdown")
+				span.glyphicon.glyphicon-user(style="color:white")
+				| &nbsp; {{identity.currentUser.firstName + " " + identity.currentUser.lastName}}
+				b.caret
+			ul.dropdown-menu
+				li(ng-show="identity.currentUser.isAdmin()")
+					a(href="/admin/users") User Admin
+				li
+					a(href="/profile") Profile
+				li
+					a(href="", ng-click="signout()") Sign Out
 
-
-
-
-
-//- .navbar-right(ng-controller="navBarLoginController")
-//- 			ul.nav.navbar-nav
-//-			 li
-//-				 a(href="/signup") Sign up
-//- 	//form.navbar-form(ng-hide="identity.isAuthenticated()")
-//- 		.form-group
-//- 			//span.btn(style="color:white")
-//- 				i.glyphicon.glyphicon-user
-//- 			input.form-control(placeholder="Email", ng-model="email")
-//- 		.form-group
-//- 			//span.btn(style="color:white")
-//- 				i.glyphicon.glyphicon-lock
-//- 			input.form-control(type="password", placeholder="Password", ng-model="password")
-//- 	//form.navbar-form
-//- 	form.form.navbar-form.btn-group(role="group")
-//- 		button.btn.navbar-btn.btn-success(href="/login", type="button")
-//- 			i.fa.fa-user.fa-lg
-//- 				|	Sing in
-//- 		button.btn.navbar-btn.btn-primary(href="/signup", type="button")
-//- 			i.fa.fa-user.fa-lg
-//- 				|	Sing up
-
-
-//- 	ul.nav.navbar-nav.navbar-right(ng-show="identity.isAuthenticated()")
-//- 		li.dropdown
-//- 			a.dropdown-toggle(href="", data-toggle="dropdown")
-//- 				| {{identity.currentUser.firstName + " " + identity.currentUser.lastName}}
-//- 				b.caret
-//- 			ul.dropdown-menu
-//- 				li
-//- 					a(href="", ng-click="") Sign Out
 

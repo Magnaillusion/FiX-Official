@@ -4,7 +4,7 @@
 			span.glyphicon.glyphicon-log-in
 			|	Sign in
 		hr
-		form(novalidate='', action="/login", method="post", name="signin_form")
+		form(novalidate='', name="signin_form")
 			.form-group.has-feedback
 				label Email
 				input.form-control(autocomplete="off", type="text", name="email", ng-model="newUser.email", required)
@@ -13,15 +13,12 @@
 						| Your email is required.		
 			.form-group.has-feedback
 				label Password
-				input.form-control(autocomplete="off", type="password", name="password", ng-model="newUser.password", required)
+				input.form-control(autocomplete="off", placeholder ='password', type="password", name="password", ng-model="newUser.password", required)
 				div(ng-show='signin_form.password.$dirty && signin_form.password.$invalid')
 					span.error.help-block(ng-show='signin_form.password.$error.required')
 						| Your password is required.
-			button.btn.btn-warning(type="submit", ng-disabled="signin_form.$invalid")
+			button.btn.btn-warning(ng-click="signin(newUser.email, newUser.password)", ng-disabled="signin_form.$invalid")
 				| Sign in
-			#message
-				if message
-					h1.text-center.error-message #{message}
 		hr		
 		p Need an account? 
 			a(href='/signup') Sign up 

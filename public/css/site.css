@@ -5,9 +5,15 @@
 .navbar-header h6 {
   color: #ccc;
 }
+.navbar-inverse .navbar-brand {
+  color: #337ab7;
+}
 a.navbar-brand {
   margin-top: 20px;
   margin-bottom: 10px;
+}
+a.navbar-brand-logo {
+  margin-top: 0px;
 }
 .navbar-toggle {
   margin-top: 20px;
@@ -36,10 +42,10 @@ footer p {
   margin-left: 10px;
 }
 .toast-top-right {
-  top: 70px;
+  top: 100px;
 }
 .toast-success {
-  background-color: #13987e;
+  background-color: #337ab7;
 }
 .pager .previous > a,
 .pager .previous > span {
@@ -54,7 +60,6 @@ footer p {
 body {
   padding-top: 120px;
 }
-/** Modified Responsive CSS **/
 @viewport {
   zoom: 1;
   width: extend-to-zoom;
@@ -85,4 +90,10 @@ body {
 }
 .error {
   color: #f00;
+}
+canvas {
+  display: block;
+}
+#c {
+  position: absolute;
 }
