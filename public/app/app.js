@@ -1,4 +1,4 @@
-angular.module('app', ['ngResource', 'ngRoute', 'ui.bootstrap', 'angular-loading-bar']);
+angular.module('app', ['ngAnimate', 'ngTouch','angular-velocity', 'ngResource', 'ngRoute', 'ui.bootstrap', 'angular-loading-bar']);
 angular.module('app').value("Physics", Physics);
 
 angular.module('app').config(function($routeProvider, $locationProvider) {
@@ -55,6 +55,9 @@ angular.module('app').config(function($routeProvider, $locationProvider) {
       templateUrl: '/partials/partials/adminUserList',
       controller: 'adminUserController',
       resolve: routeRoleChecks.admin
+    })
+    .when('/animations', {
+      templateUrl: '/partials/partials/mainAnimationPartial'
     })
     .otherwise({
       redirectTo: '/'

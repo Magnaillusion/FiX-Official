@@ -1,0 +1,31 @@
+{
+  "name": "velocity-ui-angular",
+  "version": "0.3.5",
+  "author": "Ross Lavery <rosslavery@gmail.com>",
+  "description": "Velocity UI integration for AngularJS",
+  "main": "velocity.ui.angular.min.js",
+  "keywords": [
+    "AngularJS",
+    "angular",
+    "Velocity",
+    "animation",
+    "animate",
+    "velocityjs",
+    "velocity",
+    "ngAnimate",
+    "angular-animate"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-animate": "~1.2.15",
+    "angular": "~1.2.15",
+    "velocity": "~0.11.6"
+  }
+}

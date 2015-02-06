@@ -91,9 +91,35 @@ body {
 .error {
   color: #f00;
 }
-canvas {
-  display: block;
+.color-default {
+  color: #337ab7;
 }
-#c {
-  position: absolute;
+.color-danger {
+  color: #d9534f;
+}
+.center-modal {
+  position: fixed;
+  top: 20%;
+  left: 18.5%;
+  z-index: 1050;
+  width: 80%;
+  height: 80%;
+  margin-left: -10%;
+}
+.radio-quiz input[type="radio"]:checked + label {
+  color: #337ab7;
+}
+.frameCanvas {
+  border: #f00 1px solid;
+}
+.canvas-container {
+  width: 80%;
+  padding: 50px 10%;
+  height: 300px;
+}
+.modal-full-width {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
 }

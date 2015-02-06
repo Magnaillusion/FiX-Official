@@ -2,6 +2,7 @@ var authController = require("../controllers/authController");
 var topicsController = require("../controllers/topicController");
 var quizController = require("../controllers/quizController");
 var userController = require("../controllers/userController");
+var translatorController = require("../controllers/translatorController");
 
 module.exports = function(app) {
 
@@ -13,6 +14,9 @@ module.exports = function(app) {
   app.get('/api/topics/practices/:topic', quizController.getQuizByTopic);
   app.get('/api/topics', topicsController.getTopics);
   app.get('/api/topics/:id', topicsController.getTopicsById);
+
+  app.get('/api/translation/:language', translatorController.getLanguage);
+
   app.get('/partials/*', function(req, res) {
     res.render('../../public/app/' + req.params[0]);
   });

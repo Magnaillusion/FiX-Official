@@ -10,7 +10,8 @@ var questionSchema = mongoose.Schema({
     type: {
         type: String
     },
-    choices: [{}],
+    choices: [String],
+    dataURL: [String],
     answers: [Number]
 });
 
@@ -30,87 +31,35 @@ function createDefaultQuices() {
         if (collection.length === 0) {
             console.log("No hay quices");
             quizModel.create({
-                title: "Angular quiz",
-                topics: ["newton first law"],
+                title: "Movimiento de una partícula",
+                topics: ["Movimiento de una partícula"],
                 questions: [{
                     _id: 1,
-                    question: "AngularJS is written completely in JavaScript?",
-                    type: "True-False",
-                    choices: ["True", "False"],
-                    answers: [1]
+                    question: "Un auto recorre 5 km hacia el norte y luego 10 km hacia el este, en 10 minutos.  La rapidez media del auto para el recorrido total es:",
+                    type: "Multichoice",
+                    choices: ["15 km/min", "0,5 km/min", "1,5 km/min", "0,67 km/min"],
+                    answers: [2]
                 }, {
                     _id: 2,
-                    question: "AngularJS 1.0 was released in 2013?",
+                    question: "Una lancha recorre 500 m hacia el este en 20 s; la velocidad de la lancha es:",
                     type: "Multichoice",
-                    choices: ["Yahoo!", "Google", "AngularJS.org", "Microsoft"],
+                    choices: ["25 m/s", "0,04 m/s", "25 m/s este", "0,04 este"],
                     answers: [2]
                 },
                 {
                     _id: 3,
-                    question: "AngularJS is written completely in JavaScript?",
-                    type: "True-False",
-                    choices: ["True", "False"],
-                    answers: [1]
+                    question: "Dos motociclistas se desplazan uno al lado del otro en la misma dirección, con rapidez de 20 m/s ambos; la rapidez de uno de ellos con respecto al otro es:",
+                    type: "Multichoice",
+                    choices: ["0 m/s", "10 m/s", "20 m/s", "40 m/s"],
+                    answers: [0]
                 }, {
                     _id: 4,
-                    question: "AngularJS 1.0 was released in 2013?",
+                    question: "Un tren parte del reposo y acelera uniformemente; al cabo de 0,02 h la magnitud de su velocidad es 50 km/h.  En ese tiempo el tren recorrió una distancia de:",
                     type: "Multichoice",
-                    choices: ["Yahoo!", "Google", "AngularJS.org", "Microsoft"],
-                    answers: [2]
-                },
-                {
-                    _id: 5,
-                    question: "AngularJS is written completely in JavaScript?",
-                    type: "True-False",
-                    choices: ["True", "False"],
+                    choices: ["50 km", "0,5 km", "1,0 km", "2500 km"],
                     answers: [1]
-                }, {
-                    _id: 6,
-                    question: "AngularJS 1.0 was released in 2013?",
-                    type: "Multichoice",
-                    choices: ["Yahoo!", "Google", "AngularJS.org", "Microsoft"],
-                    answers: [2]
-                },
-                {
-                    _id: 7,
-                    question: "AngularJS is written completely in JavaScript?",
-                    type: "True-False",
-                    choices: ["True", "False"],
-                    answers: [1]
-                }, {
-                    _id: 8,
-                    question: "AngularJS 1.0 was released in 2013?",
-                    type: "Multichoice",
-                    choices: ["Yahoo!", "Google", "AngularJS.org", "Microsoft"],
-                    answers: [2]
-                },
-                {
-                    _id: 9,
-                    question: "AngularJS is written completely in JavaScript?",
-                    type: "True-False",
-                    choices: ["True", "False"],
-                    answers: [1]
-                }, {
-                    _id: 10,
-                    question: "AngularJS 1.0 was released in 2013?",
-                    type: "Multichoice",
-                    choices: ["Yahoo!", "Google", "AngularJS.org", "Microsoft"],
-                    answers: [2]
-                },
-                {
-                    _id: 11,
-                    question: "AngularJS is written completely in JavaScript?",
-                    type: "True-False",
-                    choices: ["True", "False"],
-                    answers: [1]
-                }, {
-                    _id: 12,
-                    question: "AngularJS 1.0 was released in 2013?",
-                    type: "Multichoice",
-                    choices: ["Yahoo!", "Google", "AngularJS.org", "Microsoft"],
-                    answers: [2]
                 }],
-                tags: ["Newton laws"]
+                tags: ["Movimiento"]
             });
         }
     })

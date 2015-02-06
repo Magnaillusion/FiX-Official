@@ -2,6 +2,8 @@ var mongoose = require('mongoose');
 var topicModel = require('../models/topicModel');
 var quizModel = require('../models/quizModel');
 var userModel = require('../models/userModel');
+var languageModel = require('../models/languageModel');
+var imageModel = require('../models/imageModel');
 
 module.exports = function(config) {
 	mongoose.connect(config.db);
@@ -14,5 +16,7 @@ module.exports = function(config) {
 	topicModel.createDefaultTopics();
 	quizModel.createDefaultQuices();
 	userModel.createDefaultUsers();
+	languageModel.createDefaultLanguages();
+	imageModel.createDefaultImages();
 
 }

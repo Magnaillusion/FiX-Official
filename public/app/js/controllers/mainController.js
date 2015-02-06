@@ -1,9 +1,14 @@
-angular.module('app').controller('mainController', function($scope, topicResource) {
-	$scope.topics = topicResource.query();
+angular.module('app').controller('mainController', function($scope, topicResource, translationService) {
+  $scope.topics = topicResource.query();
 
-	$scope.customer = {
-	      name: 'Naomi',
-	      address: '1600 Amphitheatre'
-	    };
-		
+  //Run translation if selected language changes
+  $scope.translate = function(){
+       translationService.getTranslation($scope, $scope.selectedLanguage);
+   };
+   
+   //Init
+   $scope.selectedLanguage = 'es-cr';
+   $scope.translate();
+
+    
 });
