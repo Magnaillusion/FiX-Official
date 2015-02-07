@@ -1,4 +1,4 @@
-angular.module('app').directive("canvasAnimationBallsDirective", function($swipe) {
+/*angular.module('app').directive("canvasAnimationBallsDirective", function($swipe) {
   return {
     restrict: 'EA',
     transclude: true,
@@ -251,4 +251,4 @@ element.bind('mouseup', function(event) {
     currentY = event.layerY - event.currentTarget.offsetTop;
   }
   balls.push(new ball(mousePos['downX'], mousePos["downY"], (currentX - mousePos["downX"]) * forceFactor, (currentY - mousePos["downY"]) * forceFactor, 5 + (Math.random() * 10), 0.9, random_color()));
-});*/
+});*/*/

@@ -21,6 +21,7 @@ angular.module('app').directive("canvasAnimationBallsDirective", function($swipe
         var gravity = 4;
         var forceFactor = 0.3;
         var mouseDown = false;
+        var mouseBegunInside = false;
         var balls = new Array();
         var mousePos = new Array();
 
@@ -36,20 +37,28 @@ angular.module('app').directive("canvasAnimationBallsDirective", function($swipe
 
         canvas.addEventListener("touchstart", touchDown, true);
         canvas.addEventListener("touchmove", touchXY, true);
-        canvas.addEventListener("touchend", touchUp, true);
+        canvas.addEventListener("touchend", touchUp, false);
+        canvas.addEventListener("mouseout", mouseout, true);
+        canvas.addEventListener("touchcancel", touchUp, false);
 
         window.addEventListener('resize', resizeCanvas, false);
         window.addEventListener('orientationchange', resizeCanvas, false);
 
+        function mouseout(){
+          if (mouseBegunInside){
+            touchUp();
+            mouseBegunInside = false;
+          }
+        }
+
         function resizeCanvas() {
           canvas.width = window.innerWidth - window.innerWidth*0.2;
-          //canvas.height = window.innerHeight - window.innerWidth*0.4;
+          canvas.height = window.innerHeight - window.innerWidth*0.2;
           console.log(canvas.width, canvas.height);
         }
 
         function touchDown(e) {
           mouseDown = true;
-
           if (!e)
             var e = event;
           e.preventDefault();
@@ -60,7 +69,7 @@ angular.module('app').directive("canvasAnimationBallsDirective", function($swipe
           mousePos['downY'] = touchPosY;
         }
 
-        function touchUp(event) {
+        function touchUp() {
           mouseDown = false;
           balls.push(new ball(mousePos['downX'], mousePos["downY"], (mousePos['currentX'] - mousePos["downX"]) * forceFactor, (mousePos['currentY'] - mousePos["downY"]) * forceFactor, 5 + (Math.random() * maxRadius), 0.9, colors.randomElement()));
         }
@@ -98,11 +107,13 @@ angular.module('app').directive("canvasAnimationBallsDirective", function($swipe
 
         scope.onMouseDown = function(event) {
           mouseDown = true;
+          mouseBegunInside = true;
           updatePosDown(event);
         }
 
         scope.onMouseUp = function(event) {
           mouseDown = false;
+          mouseBegunInside = false;
           if (event.offsetX !== undefined) {
             currentX = event.offsetX;
             currentY = event.offsetY;

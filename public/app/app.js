@@ -1,5 +1,7 @@
-angular.module('app', ['ngAnimate', 'ngTouch','angular-velocity', 'ngResource', 'ngRoute', 'ui.bootstrap', 'angular-loading-bar']);
-angular.module('app').value("Physics", Physics);
+var fixApp =angular.module('app', ['ngAnimate', 'ngTouch','angular-velocity', 'ngResource', 'ngRoute', 'ui.bootstrap', 'angular-loading-bar']);
+
+
+fixApp.value("Physics", Physics);
 
 angular.module('app').config(function($routeProvider, $locationProvider) {
 
@@ -58,6 +60,9 @@ angular.module('app').config(function($routeProvider, $locationProvider) {
     })
     .when('/animations', {
       templateUrl: '/partials/partials/mainAnimationPartial'
+    })
+    .when('/animations/physics', {
+      templateUrl: '/partials/partials/physicsPixiAnimationPartial'
     })
     .otherwise({
       redirectTo: '/'
