@@ -9,7 +9,7 @@
 				label Name
 				input.form-control(autocomplete="off", type="text", name="name", ng-model="newUser.name", ng-minlength='{{minLenName}}', ng-maxlength='{{maxLenName}}', required)
 				span.glyphicon.glyphicon-ok.form-control-feedback.btn-primary(aria-hidden="true", ng-show='!signup_form.name.$error.required && !signup_form.name.$error.minlength && !signup_form.name.$error.maxlength')
-				div(ng-show='signup_form.name.$dirty && signup_form.name.$invalid')
+				button(ng-show='signup_form.name.$dirty && signup_form.name.$invalid')
 					span.error.help-block(ng-show='signup_form.name.$error.required')
 						| Your name is required.
 					span.help-block(ng-show='signup_form.name.$error.minlength')
