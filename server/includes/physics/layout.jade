@@ -1,5 +1,5 @@
 doctype html
-html
+html(ng-cloak="")
   head
   title Fix
   link(rel="stylesheet", href="/vendor/lumx/dist/lumx.css")
@@ -9,9 +9,18 @@ html
   link(rel="stylesheet", href="/vendor/angular-material/angular-material.css")
   link(rel="stylesheet", href="/css/site.css")
   //meta(name='viewport', content='width=device-width, initial-scale=1.0')
-  meta(name="viewport", content="initial-scale=1, maximum-scale=1, user-scalable=no")
+  //meta(name="viewport", content="initial-scale=1, maximum-scale=1, user-scalable=no")
 
-  body(ng-app='app')
+  meta(charset='utf-8')
+  meta(http-equiv='X-UA-Compatible', content='IE=edge, chrome=1')
+  meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no')
+  title(data-ng-bind='title')
+  style.
+    .ng-hide {
+      display: none !important;
+    }
+
+  body()
     include currentUser
     block main-content
     include scripts

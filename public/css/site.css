@@ -9,6 +9,14 @@
 /* You can override this value if your picture has a weird ratio */
   background-position: 50% 50%;
 }
+[ng:cloak],
+[ng-cloak],
+[data-ng-cloak],
+[x-ng-cloak],
+.ng-cloak,
+.x-ng-cloak {
+  display: none !important;
+}
 .bare-list,
 .dropdown-menu ul,
 .list,
