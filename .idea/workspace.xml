@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d4b093a2-e072-4857-8b0c-622575c88c22" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/views/physics/index.html" afterPath="$PROJECT_DIR$/server/views/physics/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/views/physics/index.jade" afterPath="$PROJECT_DIR$/server/views/physics/index.jade" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/app/layout/sidenav/sidenavController.js" afterPath="$PROJECT_DIR$/public/app/layout/sidenav/sidenavController.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="FiX-Official.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -46,21 +49,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.jade" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.jade" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/server/views/physics/index.jade">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2380">
-              <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
+            <state vertical-scroll-proportion="0.265625" vertical-offset="0" max-vertical-offset="2380">
+              <caret line="11" column="37" selection-start-line="11" selection-start-column="37" selection-end-line="11" selection-end-column="37" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sidenavController.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="sidenavController.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/app/layout/sidenav/sidenavController.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.40306833" vertical-offset="0" max-vertical-offset="717">
-              <caret line="17" column="14" selection-start-line="17" selection-start-column="14" selection-end-line="17" selection-end-column="14" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="595">
+              <caret line="16" column="40" selection-start-line="16" selection-start-column="40" selection-end-line="16" selection-end-column="40" />
               <folding />
             </state>
           </provider>
@@ -85,9 +88,9 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/server/views/physics/index.jade" />
         <option value="$PROJECT_DIR$/server/includes/physics/layout.jade" />
         <option value="$PROJECT_DIR$/public/app/layout/sidenav/sidenavController.js" />
+        <option value="$PROJECT_DIR$/server/views/physics/index.jade" />
       </list>
     </option>
   </component>
@@ -443,14 +446,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/views/physics/index.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2380">
-          <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/server/includes/physics/layout.jade">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="374">
@@ -461,8 +456,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/app/layout/sidenav/sidenavController.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.40306833" vertical-offset="0" max-vertical-offset="717">
-          <caret line="17" column="14" selection-start-line="17" selection-start-column="14" selection-end-line="17" selection-end-column="14" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="595">
+          <caret line="16" column="40" selection-start-line="16" selection-start-column="40" selection-end-line="16" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/views/physics/index.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.265625" vertical-offset="0" max-vertical-offset="2380">
+          <caret line="11" column="37" selection-start-line="11" selection-start-column="37" selection-end-line="11" selection-end-column="37" />
           <folding />
         </state>
       </provider>

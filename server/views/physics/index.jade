@@ -3,13 +3,13 @@ extends ../../includes/physics/layout
 block main-content
     div(layout="row", data-ng-controller="SidenavController as vmSidenav")
 
-        md-sidenav.md-sidenav-left.md-whiteframe-z2(md-component-id="left", md-is-locked-open="$mdMedia('gt-sm')")
+        md-sidenav.md-sidenav-left.md-whiteframe-z2(md-component-id="left")
             md-toolbar.md-theme-indigo
                 h1.md-toolbar-tools FiX
             //    md-content.md-padding(ng-controller="LeftCtrl")
             md-content.md-padding()
                 //md-button.md-primary(ng-click="close()", hide-gt-md="")
-                md-button.md-primary(hide-gt-md="", ng-click="vmSidenav.toggleSidenav('left')")
+                md-button.md-primary(ng-click="vmSidenav.toggleSidenav('left')")
                     | Close Sidenav Left
                 p(hide-md="", show-gt-md="")
                     | This sidenav is locked open on your device. To go back to the default behavior,
@@ -19,13 +19,13 @@ block main-content
 
             md-toolbar.md-default-theme()
                 .md-toolbar-tools(tabindex="0")
-                    button(class="btn btn--l btn--white btn--icon", lx-ripple ="", hide-gt-md="", ng-click="vmSidenav.toggleSidenav('left')")
+                    button(class="btn btn--l btn--white btn--icon", lx-ripple ="", ng-click="vmSidenav.toggleSidenav('left')")
                         i(class="mdi mdi-menu")
                     //span.toolbar__label.fs-title.tc-white-1.ml(hide-gt-md="") FiX
                     //md-toolbar.md-theme-indigo
-                    h1.md-toolbar-tools(hide-gt-md="") FiX
-                    .toolbar__label
-                    .toolbar__right
+                    h1.md-toolbar-tools() FiX
+                    //.toolbar__label
+                    //.toolbar__right
                         lx-search-filter(model="searchFilter.sixth", position="right", theme="dark", closed="", placeholder="Buscar")
                     //.toolbar__right
                         lx-search-filter.ng-isolate-scope(closed="", theme="light")

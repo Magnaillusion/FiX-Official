@@ -15,9 +15,15 @@
         vm.toggleSidenav = toggleSidenav;
 
         function toggleSidenav(menuId) {
-            //$mdSidenav(menuId).isLockedOpen();
             // Open the given sidenav
             $mdSidenav(menuId).toggle();
+        }
+
+        function toggleSidenavClose(menuId) {
+            $mdSidenav(menuId).close()
+                .then(function () {
+                    $log.debug("close " + menuId + " is done");
+                });
         }
 
     }
