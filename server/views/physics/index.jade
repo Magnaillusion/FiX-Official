@@ -9,11 +9,8 @@ block main-content
             //    md-content.md-padding(ng-controller="LeftCtrl")
             md-content.md-padding()
                 //md-button.md-primary(ng-click="close()", hide-gt-md="")
-                md-button.md-primary(ng-click="vmSidenav.toggleSidenav('left')")
+                md-button.md-primary(ng-click="vmSidenav.closeSidenav('left')")
                     | Close Sidenav Left
-                p(hide-md="", show-gt-md="")
-                    | This sidenav is locked open on your device. To go back to the default behavior,
-                    | narrow your display.
 
         div(layout="column", tabindex="-1", role="main", flex="")
 

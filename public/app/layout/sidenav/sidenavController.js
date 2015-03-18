@@ -13,16 +13,20 @@
         var vm = this;
         vm.title = 'SidenavController';
         vm.toggleSidenav = toggleSidenav;
+        vm.closeSidenav = closeSidenav;
 
         function toggleSidenav(menuId) {
             // Open the given sidenav
-            $mdSidenav(menuId).toggle();
+            $mdSidenav(menuId).toggle()
+                .then(function () {
+                console.log("toggle " + menuId + " is done");
+            });
         }
 
-        function toggleSidenavClose(menuId) {
+        function closeSidenav(menuId) {
             $mdSidenav(menuId).close()
                 .then(function () {
-                    $log.debug("close " + menuId + " is done");
+                    console.log("close " + menuId + " is done");
                 });
         }
 
