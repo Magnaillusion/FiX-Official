@@ -21,12 +21,12 @@ block main-content
                 .md-toolbar-tools(tabindex="0")
                     button(class="btn btn--l btn--white btn--icon", lx-ripple ="", ng-click="vmSidenav.toggleSidenav('left')")
                         i(class="mdi mdi-menu")
-                    //span.toolbar__label.fs-title.tc-white-1.ml(hide-gt-md="") FiX
+                    span.toolbar__label.fs-title.tc-white-1.ml() FiX
                     //md-toolbar.md-theme-indigo
-                    h1.md-toolbar-tools() FiX
+                    //h1.md-toolbar-tools() FiX
                     //.toolbar__label
                     //.toolbar__right
-                    .toolbar__right
+                    //.toolbar__right
                         lx-search-filter(model="searchFilter.sixth", position="right", theme="dark", closed="", placeholder="Buscar")
                     //.toolbar__right
                         lx-search-filter.ng-isolate-scope(closed="", theme="light")
