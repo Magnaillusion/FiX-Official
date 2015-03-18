@@ -3,7 +3,7 @@ extends ../../includes/physics/layout
 block main-content
     div(layout="row", data-ng-controller="SidenavController as vmSidenav")
 
-        md-sidenav.md-sidenav-left.md-whiteframe-z2(md-component-id="left", md-is-locked-open="$mdMedia('gt-sm')")
+        md-sidenav.md-sidenav-left.md-whiteframe-z2(md-component-id="left")
             md-toolbar.md-theme-indigo
                 h1.md-toolbar-tools FiX
             //    md-content.md-padding(ng-controller="LeftCtrl")
@@ -19,12 +19,12 @@ block main-content
 
             md-toolbar.md-default-theme()
                 .md-toolbar-tools(tabindex="0")
-                    button(class="btn btn--l btn--white btn--icon", lx-ripple ="", hide-gt-md="", ng-click="vmSidenav.toggleSidenav('left')")
+                    button(class="btn btn--l btn--white btn--icon", lx-ripple ="", ng-click="vmSidenav.toggleSidenav('left')")
                         i(class="mdi mdi-menu")
                     //span.toolbar__label.fs-title.tc-white-1.ml(hide-gt-md="") FiX
                     //md-toolbar.md-theme-indigo
-                    h1.md-toolbar-tools(hide-gt-md="") FiX
-                    .toolbar__label
+                    h1.md-toolbar-tools() FiX
+                    //.toolbar__label
                     .toolbar__right
                         lx-search-filter(model="searchFilter.sixth", position="right", theme="dark", closed="", placeholder="Buscar")
                     //.toolbar__right
