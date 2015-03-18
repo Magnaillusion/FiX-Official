@@ -17,9 +17,9 @@
 
         function toggleSidenav(menuId) {
             // Open the given sidenav
-            $mdSidenav(menuId).toggle()
+            $mdSidenav(menuId).open()
                 .then(function () {
-                console.log("toggle " + menuId + " is done");
+                console.log("open " + menuId + " is done");
             });
         }
 
