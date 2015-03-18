@@ -1,0 +1,39 @@
+<!--div(ng-controller="SidenavController as vmSidenav", layout="column")section(layout="row", flex="")
+   md-sidenav.md-sidenav-left.md-whiteframe-z2(md-component-id="left", md-is-locked-open="$mdMedia('gt-md')")
+      md-toolbar.md-theme-indigo
+         h1.md-toolbar-tools Sidenav Left
+      md-content.md-padding(data-ng-controller="SidenavLeftController as vmSidenavLeft")
+         md-button.md-primary(ng-click="vmSidenavLeft.close()", hide-gt-md="")
+            | Close Sidenav Left
+         p(hide-md="", show-gt-md="")
+            | This sidenav is locked open on your device. To go back to the default behavior,
+            | narrow your display.
+   md-content.md-padding(flex="")
+      div(layout="column", layout-fill="", layout-align="top center")
+         p
+            | The left sidenav will "lock open" on a medium (&#62;=960px wide) device.
+         div
+            md-button.md-primary(ng-click="vmSidenav.toggleLeft()", hide-gt-md="")
+               | Toggle left
+         div
+            md-button.md-primary(ng-click="vmSidenav.toggleRight()")
+               | Toggle right
+      div(flex="")
+   md-sidenav.md-sidenav-right.md-whiteframe-z2(md-component-id="right")
+      md-toolbar.md-theme-light
+         h1.md-toolbar-tools Sidenav Right
+      md-content.md-padding(data-ng-controller="SidenavLeftController as vmSidenavRight")
+         md-button.md-primary(ng-click="vmSidenavRight.close()")
+            | Close Sidenav Right
+
+--><!--div(ng-controller="SidenavController as vmSidenav")ng-include.ng-scope
+   .sidebar-filter.ng-scope.sidebar-filter--is-shown(ng-class="{ 'sidebar-filter--is-shown': vmSidenav.sidenav.isSidebarShown() }", ng-click="vmSidenav.sidenav.toggleSidebar()")
+   .vmSidenav.sidenav.ng-scope.sidebar--is-shown(ng-class="{ 'sidebar--is-shown': vmSidenav.sidenav.isSidebarShown() }")
+      .sidebar-menu
+         ul
+            li
+               a.sidebar-menu__link(href="/services/notifications", target="_self", ng-click="vmSidenav.sidenav.toggleSidebar()") Notifications
+            li
+               a.sidebar-menu__link(href="/services/progress", ng-click="vmSidenav.sidenav.toggleSidebar()") Progress
+
+--><md-sidenav md-component-id="left" md-is-locked-open="$mdMedia('gt-sm')" tabindex="-1" class="site-sidenav md-sidenav-left md-whiteframe-z2 md-closed ng-isolate-scope md-locked-open"></md-sidenav>

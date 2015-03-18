@@ -1,0 +1,29 @@
+header(md-page-header="", data-ng-controller = "TopbarController as vmTopbar")
+    div(flex-item="")
+        .card.bgc-indigo-500
+            .toolbar
+                button(class="btn btn--l btn--white btn--icon", lx-ripple ="")
+                    i(class="mdi mdi-menu", ng-click ="vmTopbar.sidenav.toggleSidebar()")
+                span.toolbar__label.fs-title.tc-white-1.ml FiX
+                .toolbar__right
+                    lx-search-filter(model="searchFilter.sixth", position="right", theme="dark", closed="", placeholder="Buscar")
+
+//div(md-header-picture="", style="background-image:url(/img/main.png)")
+
+md-content.md-padding.ng-scope.md-default-theme(ng-view="", md-scroll-y="", flex="")
+    .doc-content.ng-scope
+        header.api-profile-header
+        .api-options-bar.with-icon(layout="row")
+        .api-profile-description
+            p
+                | The
+                code &#60;md-content&#62;
+                | directive is a container element useful for scrollable content
+            h3#restrictions Restrictions
+            ul
+                li
+                    | Add the
+                    code md-padding
+                    | class to make the content padded.
+
+

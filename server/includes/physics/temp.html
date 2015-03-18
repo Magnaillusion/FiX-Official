@@ -1,0 +1,287 @@
+<div layout="column" tabindex="-1" role="main" flex="">
+    <md-toolbar class="md-default-theme">
+
+        <div class="md-toolbar-tools" ng-click="openMenu()" tabindex="0">
+            <button class="docs-menu-icon" hide-gt-sm="" aria-label="Toggle Menu">
+                <md-icon md-svg-src="img/icons/ic_menu_24px.svg" class="ng-isolate-scope md-default-theme" aria-hidden="true"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" height="100%" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve" fit="" preserveAspectRatio="xMidYMid meet" style="pointer-events: none; display: block;">
+<g id="Header">
+    <g>
+        <rect x="-618" y="-2232" fill="none" width="1400" height="3600"></rect>
+    </g>
+</g>
+<g id="Label">
+</g>
+<g id="Icon">
+    <g>
+        <rect fill="none" width="24" height="24"></rect>
+        <path d="M3,18h18v-2H3V18z M3,13h18v-2H3V13z M3,6v2h18V6H3z" style="fill:#f3f3f3;"></path>
+    </g>
+</g>
+<g id="Grid" display="none">
+    <g display="inline">
+    </g>
+</g>
+</svg></md-icon>
+            </button>
+
+            <div layout="row" flex="" class="fill-height">
+                <div class="md-toolbar-item md-breadcrumb">
+                    <!-- ngIf: menu.currentPage.name !== menu.currentSection.name --><span ng-if="menu.currentPage.name !== menu.currentSection.name" class="ng-scope">
+              <span hide-sm="" hide-md="" class="ng-binding">Directives</span>
+              <span class="docs-menu-separator-icon" style="" hide-sm="" hide-md="">
+                <img src="img/docArrow.png" alt="" aria-hidden="true">
+              </span>
+            </span><!-- end ngIf: menu.currentPage.name !== menu.currentSection.name -->
+                    <span class="md-breadcrumb-page ng-binding">md-sidenav</span>
+                </div>
+
+                <span flex=""></span> <!-- use up the empty space -->
+                <div class="md-toolbar-item md-tools docs-tools" layout="column" layout-gt-md="row">
+                    <div>
+                        <!-- ngIf: !menu.currentPage || menu.currentSection.name === 'Getting Started' -->
+                    </div>
+                    <!-- ngRepeat: doc in currentComponent.docs --><div ng-repeat="doc in currentComponent.docs" class="ng-scope">
+                    <a class="md-button md-default-theme hide" ng-transclude="" ng-href="#/api/material.components.sidenav/service/$mdSidenav" ng-class="{hide: path().indexOf('demo') == -1}" aria-label="$mdSidenav" href="#/api/material.components.sidenav/service/$mdSidenav"><span class="ng-binding ng-scope">
+                $mdSidenav
+              </span></a>
+                </div><!-- end ngRepeat: doc in currentComponent.docs --><div ng-repeat="doc in currentComponent.docs" class="ng-scope">
+                    <a class="md-button md-default-theme hide" ng-transclude="" ng-href="#/api/material.components.sidenav/directive/mdSidenav" ng-class="{hide: path().indexOf('demo') == -1}" aria-label="md-sidenav" href="#/api/material.components.sidenav/directive/mdSidenav"><span class="ng-binding ng-scope">
+                &lt;md-sidenav&gt;
+              </span></a>
+                </div><!-- end ngRepeat: doc in currentComponent.docs -->
+                    <a class="md-button md-default-theme" ng-transclude="" ng-class="{hide: !currentDoc || !currentDoc.hasDemo}" ng-href="#/demo/material.components.sidenav" style="position: relative; padding-left: 30px; margin-right: 15px;" href="#/demo/material.components.sidenav">
+                        <md-icon md-svg-src="img/icons/ic_play_arrow_24px.svg" style="
+                  height: 36px;
+                  position: absolute;
+                  left: 0px;
+                  top: -3px;
+                  margin-top: 0;" class="ng-scope ng-isolate-scope md-default-theme" aria-hidden="true"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" height="100%" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve" fit="" preserveAspectRatio="xMidYMid meet" style="pointer-events: none; display: block;">
+<g id="Header">
+	<g>
+		<rect x="-618" y="-2232" fill="none" width="1400" height="3600"></rect>
+	</g>
+</g>
+<g id="Label">
+</g>
+<g id="Icon">
+	<g>
+		<polygon points="8,5 8,19 19,12 		" style="fill:#f3f3f3;"></polygon>
+		<rect fill="none" width="24" height="24"></rect>
+	</g>
+</g>
+<g id="Grid" display="none">
+	<g display="inline">
+	</g>
+</g>
+</svg></md-icon>
+                        <span class="ng-scope">View Demo</span>
+                    </a>
+
+                    <a class="md-button md-default-theme" ng-transclude="" ng-class="{hide: !currentDoc}" ng-href="https://github.com/angular/material/blob/master/src/components/sidenav/sidenav.js" hide-sm="" hide-md="" style="position: relative; padding-left: 30px; margin-right: 15px;" href="https://github.com/angular/material/blob/master/src/components/sidenav/sidenav.js">
+                        <md-icon md-svg-src="img/icons/ic_launch_24px.svg" style="
+                  height: 36px;
+                  position: absolute;
+                  left: 0px;
+                  top: -3px;
+                  margin-top: 0;" class="ng-scope ng-isolate-scope md-default-theme" aria-hidden="true"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" height="100%" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve" fit="" preserveAspectRatio="xMidYMid meet" style="pointer-events: none; display: block;">
+<g id="Header">
+	<g>
+		<rect x="-618" y="-824" fill="none" width="1400" height="3600"></rect>
+	</g>
+</g>
+<g id="Label">
+</g>
+<g id="Icon">
+	<g>
+		<rect fill="none" width="24" height="24"></rect>
+		<path d="M19,19H5V5h7V3H5C3.9,3,3,3.9,3,5v14c0,1.1,0.9,2,2,2h14c1.1,0,2-0.9,2-2v-7h-2V19z M14,3v2h3.6l-9.8,9.8l1.4,1.4L19,6.4
+			V10h2V3H14z" style="fill:#f3f3f3;"></path>
+	</g>
+</g>
+<g id="Grid" display="none">
+	<g display="inline">
+	</g>
+</g>
+</svg></md-icon>
+                        <span class="ng-scope">View on Github</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </md-toolbar>
+
+    <!-- ngView:  --><md-content ng-view="" md-scroll-y="" flex="" class="md-padding ng-scope md-default-theme"><div class="doc-content ng-scope">
+
+
+
+    <header class="api-profile-header">
+
+    </header>
+
+
+
+    <div layout="row" class="api-options-bar with-icon">
+    </div>
+
+
+    <div class="api-profile-description">
+        <p>A Sidenav component that can be opened and closed programatically.</p>
+        <p>By default, upon opening it will slide out on top of the main content area.</p>
+
+    </div>
+
+
+    <div>
+
+
+
+
+
+        <div class="usage">
+            <h2 id="Usage">Usage</h2>
+
+            <hljs lang="html"><pre><code class="highlight" ng-non-bindable=""><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">layout</span>=<span class="hljs-value">"row"</span> <span class="hljs-attribute">ng-controller</span>=<span class="hljs-value">"MyController"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">md-sidenav</span> <span class="hljs-attribute">md-component-id</span>=<span class="hljs-value">"left"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"md-sidenav-left"</span>&gt;</span>
+                Left Nav!
+                <span class="hljs-tag">&lt;/<span class="hljs-title">md-sidenav</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">md-content</span>&gt;</span>
+                Center Content
+                <span class="hljs-tag">&lt;<span class="hljs-title">md-button</span> <span class="hljs-attribute">ng-click</span>=<span class="hljs-value">"openLeftMenu()"</span>&gt;</span>
+                Open Left Menu
+                <span class="hljs-tag">&lt;/<span class="hljs-title">md-button</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-title">md-content</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">md-sidenav</span> <span class="hljs-attribute">md-component-id</span>=<span class="hljs-value">"right"</span> <span class="hljs-attribute">md-is-locked-open</span>=<span class="hljs-value">"$mdMedia('min-width: 333px')"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"md-sidenav-right"</span>&gt;</span>
+                Right Nav!
+                <span class="hljs-tag">&lt;/<span class="hljs-title">md-sidenav</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></code></pre></hljs>
+
+            <hljs lang="js"><pre><code class="highlight" ng-non-bindable=""><span class="hljs-keyword">var</span> app = angular.module(<span class="hljs-string">'myApp'</span>, [<span class="hljs-string">'ngMaterial'</span>]);
+                app.controller(<span class="hljs-string">'MyController'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">($scope, $mdSidenav)</span> </span>{
+                $scope.openLeftMenu = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> </span>{
+                $mdSidenav(<span class="hljs-string">'left'</span>).toggle();
+                };
+                });</code></pre></hljs>
+
+        </div>
+
+        <section class="api-section">
+            <h3>
+
+                Attributes
+
+            </h3>
+
+            <md-list role="list">
+                <md-item role="listitem">
+                    <md-item-content class="dashed-bottom">
+                        <div class="api-params-label api-params-title" flex="20" layout="" layout-align="center center">
+                            Parameter
+                        </div>
+                        <div class="api-params-label api-params-title" flex="15" layout="" layout-align="center center" block-sm="">
+                            Type
+                        </div>
+                        <div class="api-params-content api-params-title" flex="" layout="row" layout-align="left center" style="padding-top:15px">
+                            Description
+                        </div>
+                    </md-item-content>
+                </md-item>
+
+
+                <md-item class="api-params-item" role="listitem">
+                    <md-item-content>
+                        <div class="api-params-label" flex="35" flex-gt-sm="20">
+                            md-is-open
+        
+        <span hide="" show-sm="">
+          
+<code class="api-type label type-hint type-hint-expression">expression</code>
+        </span>
+                            <div><em>(optional)</em></div>
+                        </div>
+                        <div class="api-params-label" hide-sm="" flex="15">
+
+                            <code class="api-type label type-hint type-hint-expression">expression</code>
+                        </div>
+                        <div class="api-params-content" flex="">
+                            <p></p><p>A model bound to whether the sidenav is opened.</p>
+
+
+                            <p></p>
+                        </div>
+                    </md-item-content>
+                </md-item>
+
+                <md-item class="api-params-item" role="listitem">
+                    <md-item-content>
+                        <div class="api-params-label" flex="35" flex-gt-sm="20">
+                            md-component-id
+        
+        <span hide="" show-sm="">
+          
+<code class="api-type label type-hint type-hint-string">string</code>
+        </span>
+                            <div><em>(optional)</em></div>
+                        </div>
+                        <div class="api-params-label" hide-sm="" flex="15">
+
+                            <code class="api-type label type-hint type-hint-string">string</code>
+                        </div>
+                        <div class="api-params-content" flex="">
+                            <p></p><p>componentId to use with $mdSidenav service.</p>
+
+
+                            <p></p>
+                        </div>
+                    </md-item-content>
+                </md-item>
+
+                <md-item class="api-params-item" role="listitem">
+                    <md-item-content>
+                        <div class="api-params-label" flex="35" flex-gt-sm="20">
+                            md-is-locked-open
+        
+        <span hide="" show-sm="">
+          
+<code class="api-type label type-hint type-hint-expression">expression</code>
+        </span>
+                            <div><em>(optional)</em></div>
+                        </div>
+                        <div class="api-params-label" hide-sm="" flex="15">
+
+                            <code class="api-type label type-hint type-hint-expression">expression</code>
+                        </div>
+                        <div class="api-params-content" flex="">
+                            <p></p><p>When this expression evalutes to true,
+                            the sidenav 'locks open': it falls into the content's flow instead
+                            of appearing over it. This overrides the <code>is-open</code> attribute.</p>
+                            <p>The $mdMedia() service is exposed to the is-locked-open attribute, which
+                                can be given a media query or one of the <code>sm</code>, <code>gt-sm</code>, <code>md</code>, <code>gt-md</code>, <code>lg</code> or <code>gt-lg</code> presets.
+                                Examples:</p>
+                            <ul>
+                                <li><code>&lt;md-sidenav md-is-locked-open="shouldLockOpen"&gt;&lt;/md-sidenav&gt;</code></li>
+                                <li><code>&lt;md-sidenav md-is-locked-open="$mdMedia('min-width: 1000px')"&gt;&lt;/md-sidenav&gt;</code></li>
+                                <li><code>&lt;md-sidenav md-is-locked-open="$mdMedia('sm')"&gt;&lt;/md-sidenav&gt;</code> (locks open on small screens)</li>
+                            </ul>
+
+
+                            <p></p>
+                        </div>
+                    </md-item-content>
+                </md-item>
+
+
+            </md-list>
+
+        </section>
+
+
+
+
+    </div>
+
+
+</div>
+</md-content>
+
+</div>
