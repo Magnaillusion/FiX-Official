@@ -1,14 +1,16 @@
 var express = require("express");
 
 var env = process.env.NODE_ENV = process.env.NODE_ENV || 'development';
+var defaultMode = 'physics';//'physics';
+var mode = process.env.NODE_MODE || defaultMode; // Custom mode
 
 var app = express();
-var config = require('./server/config/config')[env];
+var config = require('./server/config/'+mode+'/config')[env];
 
-require('./server/config/express')(app, config);
-require('./server/config/mongoose')(config);
-require('./server/config/passport')();
-require('./server/config/routes')(app);
+require('./server/config/'+mode+'/express')(app, config);
+require('./server/config/'+mode+'/mongoose')(config);
+require('./server/config/'+mode+'/passport')();
+require('./server/config/'+mode+'/routes')(app);
 
 process.on('uncaughtException', function(err) {
 	console.log('Error server');
@@ -16,5 +18,5 @@ process.on('uncaughtException', function(err) {
 });
 
 app.listen(config.port);
-
+console.log('MODE: ' + mode + ' ...');
 console.log('Listening on port: ' + config.port + ' ...');
