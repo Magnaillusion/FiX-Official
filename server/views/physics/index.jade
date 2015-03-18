@@ -5,11 +5,11 @@ block main-content
 
 
 
-    div(layout="row", data-ng-controller="SidenavController as vmSidenav")
+    div(layout="row", data-ng-controller="SidenavController as vmSidenav", ng-cloak="")
 
-        md-sidenav.md-sidenav-left.md-whiteframe-z2(md-component-id="left", style="position: fixed; top: 0px;")
+        md-sidenav.md-sidenav-left.md-whiteframe-z2(md-component-id="left", style="position: fixed; top: 0px;", ng-cloak="")
             md-toolbar
-                h2.md-toolbar-tools
+                h2.md-toolbar-tools(ng-cloak="")
                     span FiX
             //    md-content.md-padding(ng-controller="LeftCtrl")
             md-content.md-padding()
@@ -17,7 +17,7 @@ block main-content
                 md-button.md-primary(ng-click="vmSidenav.closeSidenav('left')")
                     | Close Sidenav Left
 
-        div(layout="column", tabindex="-1", role="main", flex="")
+        div(layout="column", tabindex="-1", role="main", flex="", ng-cloak="")
 
             md-toolbar.md-default-theme(style="position: fixed; top: 0px; width: 100%;")
 
@@ -27,13 +27,13 @@ block main-content
                             i.mdi.mdi-menu
                     span.toolbar__label.fs-title FiX
                     .toolbar__right
-                        lx-search-filter(closed="", theme="dark")
-                        lx-dropdown(position="right", from-top="")
+                        lx-search-filter(closed="", theme="dark", filter-width="180px")
+                        lx-dropdown(position="right", from-top="", ng-cloak="")
                             button.btn.btn--l.btn--white.btn--icon(lx-ripple="", lx-dropdown-toggle="")
                                 i.ion-android-more-vertical
                             //
                                 i.ion-android-more-vertical
-                            lx-dropdown-menu
+                            lx-dropdown-menu(ng-cloak="")
                                 ul
                                     li
                                         a.dropdown-link Action
