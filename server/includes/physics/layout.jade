@@ -1,5 +1,5 @@
 doctype html
-html(ng-cloak="")
+html()
   head
   title Fix
   link(rel="stylesheet", href="/vendor/lumx/dist/lumx.css")
@@ -20,7 +20,7 @@ html(ng-cloak="")
       display: none !important;
     }
 
-  body()
+  body(ng-cloak="")
     include currentUser
     block main-content
     include scripts
