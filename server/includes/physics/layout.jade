@@ -20,7 +20,7 @@ html()
       display: none !important;
     }
 
-  body(ng-cloak="")
+  body.disappear(ng-cloak="", data-ng-controller="MainController as vmMain")
     include currentUser
     block main-content
     include scripts

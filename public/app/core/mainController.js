@@ -23,7 +23,10 @@
         }
 
         angular.element(document).ready(function() {
-
+            
+            //var myEl = angular.element( document.querySelector( '#divID' ) );
+            var body = angular.element(document).find('body');
+            body.removeClass('disappear');
         });
     }
 })();
