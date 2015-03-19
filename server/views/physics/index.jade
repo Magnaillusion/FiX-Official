@@ -5,11 +5,11 @@ block main-content
 
 
 
-    div(layout="row", data-ng-controller="SidenavController as vmSidenav", ng-cloak="")
+    div#content.disappear(layout="row", data-ng-controller="SidenavController as vmSidenav")
 
-        md-sidenav.md-sidenav-left.md-whiteframe-z2(md-component-id="left", style="position: fixed; top: 0px;", ng-cloak="")
+        md-sidenav.md-sidenav-left.md-whiteframe-z2(md-component-id="left", style="position: fixed; top: 0px;")
             md-toolbar
-                h2.md-toolbar-tools(ng-cloak="")
+                h2.md-toolbar-tools()
                     span FiX
             //    md-content.md-padding(ng-controller="LeftCtrl")
             md-content.md-padding()
@@ -17,7 +17,7 @@ block main-content
                 md-button.md-primary(ng-click="vmSidenav.closeSidenav('left')")
                     | Cerrar
 
-        div(layout="column", tabindex="-1", role="main", flex="", ng-cloak="")
+        div(layout="column", tabindex="-1", role="main", flex="")
 
             md-toolbar.md-default-theme(style="position: fixed; top: 0px; width: 100%;")
 
@@ -28,12 +28,12 @@ block main-content
                     span.toolbar__label.fs-title FiX
                     .toolbar__right
                         lx-search-filter(closed="", theme="dark", filter-width="180px")
-                        lx-dropdown(position="right", from-top="", ng-cloak="")
+                        lx-dropdown(position="right", from-top="")
                             button.btn.btn--l.btn--white.btn--icon(lx-ripple="", lx-dropdown-toggle="")
                                 i.ion-android-more-vertical
                             //
                                 i.ion-android-more-vertical
-                            lx-dropdown-menu(ng-cloak="")
+                            lx-dropdown-menu()
                                 ul
                                     li
                                         a.dropdown-link Ingresar

@@ -23,10 +23,16 @@
         }
 
         angular.element(document).ready(function() {
-            
+
             //var myEl = angular.element( document.querySelector( '#divID' ) );
-            var body = angular.element(document).find('body');
-            body.removeClass('disappear');
+            //var body = angular.element(document).find('body');
+            //body.removeClass('disappear');
+            var content = angular.element( document.querySelector( '#content' ) );
+            content.removeClass('disappear');
+            content.removeClass('bodyDisplay');
+            var spinner = angular.element( document.querySelector( '#spinner' ) );
+            spinner.addClass('disappear');
+
         });
     }
 })();
