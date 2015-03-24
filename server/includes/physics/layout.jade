@@ -20,7 +20,12 @@ html()
       display: none !important;
     }
 
-  body(ng-cloak="")
+  //ng-cloak=""
+  body.bodyDisplay(data-ng-controller="MainController as vmMain")
+    div#spinner
+      svg.spinner(width="65px", height="65px", viewbox="0 0 66 66", xmlns="http://www.w3.org/2000/svg")
+        circle.path(fill="none", stroke-width="6", stroke-linecap="round", cx="33", cy="33", r="30")
+
     include currentUser
     block main-content
     include scripts
