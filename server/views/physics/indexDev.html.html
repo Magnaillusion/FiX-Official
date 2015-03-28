@@ -1,0 +1,153 @@
+<!--div#content.disappear(layout="row", data-ng-controller="SidenavController as vmSidenav")md-sidenav.md-sidenav-left.md-whiteframe-z2(md-component-id="left", style="position: fixed; top: 0px;")
+    md-toolbar
+        h2.md-toolbar-tools()
+            span FiX
+    //    md-content.md-padding(ng-controller="LeftCtrl")
+    md-content.md-padding()
+        //md-button.md-primary(ng-click="close()", hide-gt-md="")
+        md-button.md-primary(ng-click="vmSidenav.closeSidenav('left')")
+            | Cerrar
+div(layout="column", tabindex="-1", role="main", flex="")
+    md-toolbar.md-default-theme(style="position: fixed; top: 0px; width: 100%;")
+        .toolbar
+            .toolbar__left(class="mr+++")
+                button.btn.btn--l.btn--white.btn--icon(lx-ripple="", ng-click="vmSidenav.toggleSidenav('left')")
+                    i.mdi.mdi-menu
+            span.toolbar__label.fs-title FiX
+            .toolbar__right
+                lx-search-filter(closed="", theme="dark", filter-width="180px")
+                lx-dropdown(position="right", from-top="")
+                    button.btn.btn--l.btn--white.btn--icon(lx-ripple="", lx-dropdown-toggle="")
+                        i.ion-android-more-vertical
+                    //
+                        i.ion-android-more-vertical
+                    lx-dropdown-menu()
+                        ul
+                            li
+                                a.dropdown-link Ingresar
+                            li
+                                a.dropdown-link Acerca de
+                            //li
+                                a.dropdown-link Something else here
+                            //li.dropdown-divider
+                            //li
+                                a.dropdown-link.dropdown-link--is-header Header
+                            //li
+                                a.dropdown-link Separated link
+        //.md-toolbar-tools(tabindex="0")
+            button(class="btn btn--l btn--white btn--icon", lx-ripple ="", ng-click="vmSidenav.toggleSidenav('left')")
+                i(class="mdi mdi-menu")
+            h2
+                span FiX
+            lx-search-filter.md-toolbar-tools(closed="", theme="dark", placeholder="Buscar", position="right")
+                //md-toolbar.md-theme-indigo
+            //h1.md-toolbar-tools() FiX
+            //.toolbar__label
+            //.toolbar__right
+            //.toolbar__right
+                lx-search-filter(model="searchFilter.sixth", position="right", theme="dark", closed="", placeholder="Buscar")
+            //.toolbar__right
+                lx-search-filter.ng-isolate-scope(closed="", theme="light")
+                    .search-filter.search-filter--light-theme.search-filter--is-closed(ng-class="{ 'search-filter--is-focused': model,\
+                'search-filter--is-closed': closed }")
+                        .search-filter__container
+                            label.search-filter__label
+                                i.mdi.mdi-magnify
+                            input.search-filter__input.ng-pristine.ng-untouched.ng-valid(type="text", placeholder="", ng-model="model")
+                            span.search-filter__cancel(ng-click="clear()")
+                                i.mdi.mdi-close-circle
+                .dropdown.ng-isolate-scope(ng-transclude="parent", position="right", from-top="")
+                    .btn.btn--l.btn--black.btn--icon(ng-transclude="1", lx-ripple="", lx-dropdown-toggle="", style="position: relative; overflow: hidden;")
+                        i.mdi.mdi-dots-vertical.ng-scope
+                    .dropdown-menu.dropdown-menu--right(ng-class="{ 'dropdown__menu--is-dropped': isDropped }", style="")
+                        // ngIf: isDropped
+    div(layout="column", style="padding-bottom: 15px;")
+        //md-toolbar.md-warn
+            .md-toolbar-tools
+                span.md-flex Toolbar: md-warn
+        md-content.md-padding(style="padding: 24px;margin-top: 60px;", md-scroll-y="", flex="")
+            div(md-header-picture="", style="background-image:url(/img/main.png)")
+            | Lorem ipsum dolor sit amet, ne quod novum mei. Sea omnium invenire mediocrem at, in lobortis conclusionemque nam. Ne deleniti appetere reprimique pro, inani labitur disputationi te sed. At vix sale omnesque, id pro labitur reformidans accommodare, cum labores honestatis eu. Nec quem lucilius in, eam praesent reformidans no. Sed laudem aliquam ne.
+            p
+                | Facete delenit argumentum cum at. Pro rebum nostrum contentiones ad. Mel exerci tritani maiorum at, mea te audire phaedrum, mel et nibh aliquam. Malis causae equidem vel eu. Noster melius vis ea, duis alterum oporteat ea sea. Per cu vide munere fierent.
+            p
+                | Ad sea dolor accusata consequuntur. Sit facete convenire reprehendunt et. Usu cu nonumy dissentiet, mei choro omnes fuisset ad. Te qui docendi accusam efficiantur, doming noster prodesset eam ei. In vel posse movet, ut convenire referrentur eum, ceteros singulis intellegam eu sit.
+            p
+                | Sit saepe quaestio reprimique id, duo no congue nominati, cum id nobis facilisi. No est laoreet dissentias, idque consectetuer eam id. Clita possim assueverit cu his, solum virtute recteque et cum. Vel cu luptatum signiferumque, mel eu brute nostro senserit. Blandit euripidis consequat ex mei, atqui torquatos id cum, meliore luptatum ut usu. Cu zril perpetua gubergren pri. Accusamus rationibus instructior ei pro, eu nullam principes qui, reque justo omnes et quo.
+            p
+                | Sint unum eam id. At sit fastidii theophrastus, mutat senserit repudiare et has. Atqui appareat repudiare ad nam, et ius alii incorrupte. Alii nullam libris his ei, meis aeterno at eum. Ne aeque tincidunt duo. In audire malorum mel, tamquam efficiantur has te.
+            p
+                | Qui utamur tacimates quaestio ad, quod graece omnium ius ut. Pri ut vero debitis interpretaris, qui cu mentitum adipiscing disputationi. Voluptatum mediocritatem quo ut. Fabulas dolorem ei has, quem molestie persequeris et sit.
+            p
+                | Est in vivendum comprehensam conclusionemque, alia cetero iriure no usu, te cibo deterruisset pro. Ludus epicurei quo id, ex cum iudicabit intellegebat. Ex modo deseruisse quo, mel noster menandri sententiae ea, duo et tritani malorum recteque. Nullam suscipit partiendo nec id, indoctum vulputate per ex. Et has enim habemus tibique. Cu latine electram cum, ridens propriae intellegat eu mea.
+            p
+                | Duo at aliquid mnesarchum, nec ne impetus hendrerit. Ius id aeterno debitis atomorum, et sed feugait voluptua, brute tibique no vix. Eos modo esse ex, ei omittam imperdiet pro. Vel assum albucius incorrupte no. Vim viris prompta repudiare ne, vel ut viderer scripserit, dicant appetere argumentum mel ea. Eripuit feugait tincidunt pri ne, cu facilisi molestiae usu.
+            p
+                | Qui utamur tacimates quaestio ad, quod graece omnium ius ut. Pri ut vero debitis interpretaris, qui cu mentitum adipiscing disputationi. Voluptatum mediocritatem quo ut. Fabulas dolorem ei has, quem molestie persequeris et sit.
+            p
+                | Est in vivendum comprehensam conclusionemque, alia cetero iriure no usu, te cibo deterruisset pro. Ludus epicurei quo id, ex cum iudicabit intellegebat. Ex modo deseruisse quo, mel noster menandri sententiae ea, duo et tritani malorum recteque. Nullam suscipit partiendo nec id, indoctum vulputate per ex. Et has enim habemus tibique. Cu latine electram cum, ridens propriae intellegat eu mea.
+            p
+                | Duo at aliquid mnesarchum, nec ne impetus hendrerit. Ius id aeterno debitis atomorum, et sed feugait voluptua, brute tibique no vix. Eos modo esse ex, ei omittam imperdiet pro. Vel assum albucius incorrupte no. Vim viris prompta repudiare ne, vel ut viderer scripserit, dicant appetere argumentum mel ea. Eripuit feugait tincidunt pri ne, cu facilisi molestiae usu.
+    //div(layout="column", style="padding-bottom: 15px;")
+        md-content()
+            div(md-header-picture="", style="background-image:url(/img/main.png)")
+            | Lorem ipsum dolor sit amet, ne quod novum mei. Sea omnium invenire mediocrem at, in lobortis conclusionemque nam. Ne deleniti appetere reprimique pro, inani labitur disputationi te sed. At vix sale omnesque, id pro labitur reformidans accommodare, cum labores honestatis eu. Nec quem lucilius in, eam praesent reformidans no. Sed laudem aliquam ne.
+            p
+                | Facete delenit argumentum cum at. Pro rebum nostrum contentiones ad. Mel exerci tritani maiorum at, mea te audire phaedrum, mel et nibh aliquam. Malis causae equidem vel eu. Noster melius vis ea, duis alterum oporteat ea sea. Per cu vide munere fierent.
+            p
+                | Ad sea dolor accusata consequuntur. Sit facete convenire reprehendunt et. Usu cu nonumy dissentiet, mei choro omnes fuisset ad. Te qui docendi accusam efficiantur, doming noster prodesset eam ei. In vel posse movet, ut convenire referrentur eum, ceteros singulis intellegam eu sit.
+            p
+                | Sit saepe quaestio reprimique id, duo no congue nominati, cum id nobis facilisi. No est laoreet dissentias, idque consectetuer eam id. Clita possim assueverit cu his, solum virtute recteque et cum. Vel cu luptatum signiferumque, mel eu brute nostro senserit. Blandit euripidis consequat ex mei, atqui torquatos id cum, meliore luptatum ut usu. Cu zril perpetua gubergren pri. Accusamus rationibus instructior ei pro, eu nullam principes qui, reque justo omnes et quo.
+            p
+                | Sint unum eam id. At sit fastidii theophrastus, mutat senserit repudiare et has. Atqui appareat repudiare ad nam, et ius alii incorrupte. Alii nullam libris his ei, meis aeterno at eum. Ne aeque tincidunt duo. In audire malorum mel, tamquam efficiantur has te.
+            p
+                | Qui utamur tacimates quaestio ad, quod graece omnium ius ut. Pri ut vero debitis interpretaris, qui cu mentitum adipiscing disputationi. Voluptatum mediocritatem quo ut. Fabulas dolorem ei has, quem molestie persequeris et sit.
+            p
+                | Est in vivendum comprehensam conclusionemque, alia cetero iriure no usu, te cibo deterruisset pro. Ludus epicurei quo id, ex cum iudicabit intellegebat. Ex modo deseruisse quo, mel noster menandri sententiae ea, duo et tritani malorum recteque. Nullam suscipit partiendo nec id, indoctum vulputate per ex. Et has enim habemus tibique. Cu latine electram cum, ridens propriae intellegat eu mea.
+            p
+                | Duo at aliquid mnesarchum, nec ne impetus hendrerit. Ius id aeterno debitis atomorum, et sed feugait voluptua, brute tibique no vix. Eos modo esse ex, ei omittam imperdiet pro. Vel assum albucius incorrupte no. Vim viris prompta repudiare ne, vel ut viderer scripserit, dicant appetere argumentum mel ea. Eripuit feugait tincidunt pri ne, cu facilisi molestiae usu.
+            p
+                | Qui utamur tacimates quaestio ad, quod graece omnium ius ut. Pri ut vero debitis interpretaris, qui cu mentitum adipiscing disputationi. Voluptatum mediocritatem quo ut. Fabulas dolorem ei has, quem molestie persequeris et sit.
+            p
+                | Est in vivendum comprehensam conclusionemque, alia cetero iriure no usu, te cibo deterruisset pro. Ludus epicurei quo id, ex cum iudicabit intellegebat. Ex modo deseruisse quo, mel noster menandri sententiae ea, duo et tritani malorum recteque. Nullam suscipit partiendo nec id, indoctum vulputate per ex. Et has enim habemus tibique. Cu latine electram cum, ridens propriae intellegat eu mea.
+            p
+                | Duo at aliquid mnesarchum, nec ne impetus hendrerit. Ius id aeterno debitis atomorum, et sed feugait voluptua, brute tibique no vix. Eos modo esse ex, ei omittam imperdiet pro. Vel assum albucius incorrupte no. Vim viris prompta repudiare ne, vel ut viderer scripserit, dicant appetere argumentum mel ea. Eripuit feugait tincidunt pri ne, cu facilisi molestiae usu.--><!--header(md-page-header="", data-ng-controller = "TopbarController as vmTopbar")div(flex-item="")
+    .card.bgc-indigo-500
+        .toolbar
+            button(class="btn btn--l btn--white btn--icon", lx-ripple ="")
+                i(class="mdi mdi-menu", ng-click ="vmTopbar.sidenav.toggleSidebar()")
+            span.toolbar__label.fs-title.tc-white-1.ml FiX
+            .toolbar__right
+                lx-search-filter(model="searchFilter.sixth", position="right", theme="dark", closed="", placeholder="Buscar")--><!--div(layout="raw")md-sidenav.site-sidenav.md-sidenav-left.md-whiteframe-z2.md-closed.ng-isolate-scope.md-locked-open(md-component-id="left", md-is-locked-open="$mdMedia('gt-sm')", tabindex="-1")
+    md-toolbar.md-default-theme
+        h1.md-toolbar-tools
+            a(ng-href="/", layout="row", flex="", href="/")
+                | FiX
+    md-content.md-default-theme(flex="", role="navigation")
+div(layout="column", tabindex="-1", role="main", flex="")
+    md-toolbar.md-default-theme
+        .md-toolbar-tools(tabindex="0")
+    div(layout="column", style="padding-bottom: 15px;")
+        md-content(style="height: 600px;")
+            div(md-header-picture="", style="background-image:url(/img/main.png)")
+            | Lorem ipsum dolor sit amet, ne quod novum mei. Sea omnium invenire mediocrem at, in lobortis conclusionemque nam. Ne deleniti appetere reprimique pro, inani labitur disputationi te sed. At vix sale omnesque, id pro labitur reformidans accommodare, cum labores honestatis eu. Nec quem lucilius in, eam praesent reformidans no. Sed laudem aliquam ne.
+            p
+                | Facete delenit argumentum cum at. Pro rebum nostrum contentiones ad. Mel exerci tritani maiorum at, mea te audire phaedrum, mel et nibh aliquam. Malis causae equidem vel eu. Noster melius vis ea, duis alterum oporteat ea sea. Per cu vide munere fierent.
+            p
+                | Ad sea dolor accusata consequuntur. Sit facete convenire reprehendunt et. Usu cu nonumy dissentiet, mei choro omnes fuisset ad. Te qui docendi accusam efficiantur, doming noster prodesset eam ei. In vel posse movet, ut convenire referrentur eum, ceteros singulis intellegam eu sit.
+            p
+                | Sit saepe quaestio reprimique id, duo no congue nominati, cum id nobis facilisi. No est laoreet dissentias, idque consectetuer eam id. Clita possim assueverit cu his, solum virtute recteque et cum. Vel cu luptatum signiferumque, mel eu brute nostro senserit. Blandit euripidis consequat ex mei, atqui torquatos id cum, meliore luptatum ut usu. Cu zril perpetua gubergren pri. Accusamus rationibus instructior ei pro, eu nullam principes qui, reque justo omnes et quo.
+            p
+                | Sint unum eam id. At sit fastidii theophrastus, mutat senserit repudiare et has. Atqui appareat repudiare ad nam, et ius alii incorrupte. Alii nullam libris his ei, meis aeterno at eum. Ne aeque tincidunt duo. In audire malorum mel, tamquam efficiantur has te.
+            p
+                | Qui utamur tacimates quaestio ad, quod graece omnium ius ut. Pri ut vero debitis interpretaris, qui cu mentitum adipiscing disputationi. Voluptatum mediocritatem quo ut. Fabulas dolorem ei has, quem molestie persequeris et sit.
+            p
+                | Est in vivendum comprehensam conclusionemque, alia cetero iriure no usu, te cibo deterruisset pro. Ludus epicurei quo id, ex cum iudicabit intellegebat. Ex modo deseruisse quo, mel noster menandri sententiae ea, duo et tritani malorum recteque. Nullam suscipit partiendo nec id, indoctum vulputate per ex. Et has enim habemus tibique. Cu latine electram cum, ridens propriae intellegat eu mea.
+            p
+                | Duo at aliquid mnesarchum, nec ne impetus hendrerit. Ius id aeterno debitis atomorum, et sed feugait voluptua, brute tibique no vix. Eos modo esse ex, ei omittam imperdiet pro. Vel assum albucius incorrupte no. Vim viris prompta repudiare ne, vel ut viderer scripserit, dicant appetere argumentum mel ea. Eripuit feugait tincidunt pri ne, cu facilisi molestiae usu.
+            p
+                | Qui utamur tacimates quaestio ad, quod graece omnium ius ut. Pri ut vero debitis interpretaris, qui cu mentitum adipiscing disputationi. Voluptatum mediocritatem quo ut. Fabulas dolorem ei has, quem molestie persequeris et sit.
+            p
+                | Est in vivendum comprehensam conclusionemque, alia cetero iriure no usu, te cibo deterruisset pro. Ludus epicurei quo id, ex cum iudicabit intellegebat. Ex modo deseruisse quo, mel noster menandri sententiae ea, duo et tritani malorum recteque. Nullam suscipit partiendo nec id, indoctum vulputate per ex. Et has enim habemus tibique. Cu latine electram cum, ridens propriae intellegat eu mea.
+            p
+                | Duo at aliquid mnesarchum, nec ne impetus hendrerit. Ius id aeterno debitis atomorum, et sed feugait voluptua, brute tibique no vix. Eos modo esse ex, ei omittam imperdiet pro. Vel assum albucius incorrupte no. Vim viris prompta repudiare ne, vel ut viderer scripserit, dicant appetere argumentum mel ea. Eripuit feugait tincidunt pri ne, cu facilisi molestiae usu.--><!--// NAVIGATION--><!--div(ng-include="'/layout/topbar/topbar'")--><!--div(ng-include="'/layout/sidenav/sidenav'")--><!--section.contentdiv(ui-view)--><!--footer.container.text-center(layout="row")p &copy 2014-2015-->
