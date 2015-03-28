@@ -604,7 +604,6 @@ angular.module('lumx.dropdown', [])
             dropdown = element;
 
             $scope.position = angular.isDefined($scope.position) ? $scope.position : 'left';
-
         };
 
         this.registerDropdownMenu = function(element)
@@ -680,15 +679,31 @@ angular.module('lumx.dropdown', [])
             if ($scope.position === 'right')
             {
                 origin.x = $window.innerWidth - (dropdown.offset().left + dropdown.outerWidth());
-                console.log('origen:');
-                console.log(origin);
             }
             else if ($scope.position === 'center')
             {
                 origin.x = dropdown.offset().left + (dropdown.outerWidth() - width) / 2;
             }
 
-            if (((origin.y + dropdownMenuHeight < $window.innerHeight)) || (origin.y + dropdownMenuHeight >= $window.innerHeight && origin.y - dropdownMenuHeight > 0))
+            if (origin.y + dropdownMenuHeight >= $window.innerHeight && origin.y - dropdownMenuHeight > 0)
+            { // To top
+                bottomOffset = fromTop(true) ? dropdown.outerHeight() : 0;
+
+                if (bottomOffset && origin.y - bottomOffset - dropdownMenuHeight <= 0)
+                {
+                    height = origin.y - bottomOffset - 8;
+                }
+
+                dropdownMenu.css(
+                {
+                    left: $scope.position !== 'right' ? origin.x : undefined,
+                    right: $scope.position === 'right' ? origin.x : undefined,
+                    bottom: $window.innerHeight - origin.y + bottomOffset,
+                    width: width,
+                    height: height
+                });
+            }
+            else if (origin.y + dropdownMenuHeight < $window.innerHeight)
             { // To bottom
                 topOffset = fromTop(false) ? -dropdown.outerHeight() : 0;
 

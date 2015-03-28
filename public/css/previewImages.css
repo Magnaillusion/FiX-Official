@@ -9,21 +9,25 @@
     width: 64px;
     z-index: 5;
 }
+
 .arrow.prev {
     background-image: url("../img/prev.png");
     left: 20px;
     opacity: 0.2;
     transition: all 0.2s linear 0s;
 }
+
 .arrow.next {
     background-image: url("../img/next.png");
     opacity: 0.2;
     right: 20px;
     transition: all 0.2s linear 0s;
 }
-.arrow.prev:hover{
-    opacity:1;
+
+.arrow.prev:hover {
+    opacity: 1;
 }
-.arrow.next:hover{
-    opacity:1;
+
+.arrow.next:hover {
+    opacity: 1;
 }

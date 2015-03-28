@@ -26,7 +26,7 @@
             // container during this phase.
             // --
             // NOTE: Am using .eq(1) so that we don't animate the Style block.
-            $animate.leave( element.children().eq( 1 ) ).then(
+            $animate.leave(element.children().eq(1)).then(
                 function cleanupAfterAnimation() {
 
                     // Remove the root directive element.

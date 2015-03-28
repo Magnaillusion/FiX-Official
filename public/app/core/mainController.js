@@ -22,14 +22,14 @@
         function activate() {
         }
 
-        angular.element(document).ready(function() {
+        angular.element(document).ready(function () {
 
             //var myEl = angular.element( document.querySelector( '#divID' ) );
             var body = angular.element(document).find('body');
             body.removeClass('bodyDisplay');
-            var content = angular.element( document.querySelector( '#content' ) );
+            var content = angular.element(document.querySelector('#content'));
             content.removeClass('disappear');
-            var spinner = angular.element( document.querySelector( '#spinner' ) );
+            var spinner = angular.element(document.querySelector('#spinner'));
             spinner.addClass('disappear');
 
         });

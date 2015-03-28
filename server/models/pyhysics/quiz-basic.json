@@ -1,35 +1,35 @@
 {
-  "title":      "Basic Quiz Example",
+  "title": "Basic Quiz Example",
   "questions": [
     {
-      "_id":      1,
+      "_id": 1,
       "question": "AngularJS is a declarative programming language.",
-      "answer":   true
+      "answer": true
     },
     {
-      "_id":      2,
+      "_id": 2,
       "question": "The acronym 'SPA' stands for Single-Page Application.",
-      "answer":   true
+      "answer": true
     },
     {
-      "_id":      3,
+      "_id": 3,
       "question": "AngularJS is written in C++.",
-      "answer":   false
+      "answer": false
     },
     {
-      "_id":      4,
+      "_id": 4,
       "question": "AngularJS was created at Brat Tech LLC.",
-      "answer":   true
+      "answer": true
     },
     {
-      "_id":      5,
+      "_id": 5,
       "question": "The 'M' in the MEAN stack, stands for MongoDB.",
-      "answer":   true
+      "answer": true
     },
     {
-      "_id":      6,
+      "_id": 6,
       "question": "AngularJS is best defined as a JavaScript library.",
-      "answer":   false
+      "answer": false
     }
   ]
 }

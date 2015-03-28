@@ -1,7 +1,7 @@
 /**
  * Created by RUBEN on 11/03/2015.
  */
-(function() {
+(function () {
     'use strict';
     angular
         .module('app.physics')

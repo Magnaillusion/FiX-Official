@@ -2,6 +2,5 @@
     'use strict';
 
     angular
-        .module('app.physics', [
-        ]);
+        .module('app.physics', []);
 })();

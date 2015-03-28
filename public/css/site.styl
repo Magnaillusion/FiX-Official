@@ -1,253 +1,55 @@
-[md-header-picture]
-  position relative
-  width 100%
-  height 0
-  /* Simple trick to keep a 16:9 ratio on your background image (height=0;padding-bottom=56.25%) */
-  padding-bottom 56.25%
-  overflow hidden
-  background-size 100% // 160%
-  /* You can override this value if your picture has a weird ratio */
-  background-position 50% 50%
-
-//ESTABLE
-
-[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
-  display: none !important;
-}
-
-
-.disappear
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak
   display none !important
 
-html, body {
-  height: 100%;
-}
 
-body {
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-}
+.menuBtn
+  background-color transparent
+  border none
+  height 38px
+  margin 16px 0 0 16px
+  width 36px
 
-.bodyDisplay{
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
+md-toolbar
+  h1
+    font-weight 500
 
-.spinner {
-  -webkit-animation: rotator 1.4s linear infinite;
-  animation: rotator 1.4s linear infinite;
-}
+.muppet-list
+  .md-button
+    color inherit
+    font-weight 500
+    text-align left
+    width 100%
+  .selected
+    color #03a9f4
 
-@-webkit-keyframes rotator {
-  0% {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(270deg);
-    transform: rotate(270deg);
-  }
-}
+.face
+  border-radius 30px
+  border 1px solid #ddd
+  display inline-block
+  margin 4px 16px
+  vertical-align middle
+  width 48px
 
-@keyframes rotator {
-  0% {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(270deg);
-    transform: rotate(270deg);
-  }
-}
-.path {
-  stroke-dasharray: 187;
-  stroke-dashoffset: 0;
-  -webkit-transform-origin: center;
-  -ms-transform-origin: center;
-  transform-origin: center;
-  -webkit-animation: dash 1.4s ease-in-out infinite, colors 5.6s ease-in-out infinite;
-  animation: dash 1.4s ease-in-out infinite, colors 5.6s ease-in-out infinite;
-}
+.content-wrapper
+  position relative
 
-@-webkit-keyframes colors {
-  0% {
-    stroke: #4285F4;
-  }
-  25% {
-    stroke: #DE3E35;
-  }
-  50% {
-    stroke: #F7C223;
-  }
-  75% {
-    stroke: #1B9A59;
-  }
-  100% {
-    stroke: #4285F4;
-  }
-}
-
-@keyframes colors {
-  0% {
-    stroke: #4285F4;
-  }
-  25% {
-    stroke: #DE3E35;
-  }
-  50% {
-    stroke: #F7C223;
-  }
-  75% {
-    stroke: #1B9A59;
-  }
-  100% {
-    stroke: #4285F4;
-  }
-}
-@-webkit-keyframes dash {
-  0% {
-    stroke-dashoffset: 187;
-  }
-  50% {
-    stroke-dashoffset: 46.75;
-    -webkit-transform: rotate(135deg);
-    transform: rotate(135deg);
-  }
-  100% {
-    stroke-dashoffset: 187;
-    -webkit-transform: rotate(450deg);
-    transform: rotate(450deg);
-  }
-}
-@keyframes dash {
-  0% {
-    stroke-dashoffset: 187;
-  }
-  50% {
-    stroke-dashoffset: 46.75;
-    -webkit-transform: rotate(135deg);
-    transform: rotate(135deg);
-  }
-  100% {
-    stroke-dashoffset: 187;
-    -webkit-transform: rotate(450deg);
-    transform: rotate(450deg);
-  }
-}
+#primary-col
+  overflow hidden
+  .md-button
+    margin 8px auto 16px 0
+  .cell
+    flex 1 1 auto
+  img
+    display block
+    max-width 100%
 
 
-//ESTABLE
-
-//Sidebar
-.bare-list,
-.dropdown-menu ul,
-.list,
-.tabs__links,
-.sidebar-menu ul,
-.main-nav ul,
-.colors {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.sidebar-filter {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 998;
-  background-color: rgba(0, 0, 0, 0.5);
-  opacity: 0;
-  pointer-events: none;
-  -webkit-transition-property: opacity;
-  -moz-transition-property: opacity;
-  transition-property: opacity;
-  -webkit-transition-duration: 0.6s;
-  -moz-transition-duration: 0.6s;
-  transition-duration: 0.6s;
-  -webkit-transition-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
-  -moz-transition-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
-  transition-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
-}
-
-@media screen and (max-width: 1023px) {
-  .sidebar-filter--is-shown {
-    opacity: 1;
-    pointer-events: auto;
-  }
-}
-
-.sidebar {
-  z-index: 998;
-  width: 260px;
-  border-right: solid 1px #ddd;
-  background-color: #fff;
-  -webkit-transition-property: box-shadow, -webkit-transform;
-  -moz-transition-property: box-shadow, -moz-transform;
-  transition-property: box-shadow, transform;
-  -webkit-transition-duration: 0.6s;
-  -moz-transition-duration: 0.6s;
-  transition-duration: 0.6s;
-  -webkit-transition-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
-  -moz-transition-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
-  transition-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
-  overflow: auto;
-}
-
-@media screen and (min-width: 1024px) {
-  .sidebar {
-    position: fixed;
-    top: 60px;
-    bottom: 0;
-  }
-}
-
-@media screen and (max-width: 1023px) {
-  .sidebar {
-    position: fixed;
-    top: 60px;
-    bottom: 0;
-    left: -260px;
-  }
-}
-
-@media screen and (max-width: 1023px) {
-  .sidebar--is-shown {
-    box-shadow: 3px 0 6px rgba(0, 0, 0, 0.4);
-    -webkit-transform: translateX(260px);
-    -moz-transform: translateX(260px);
-    -ms-transform: translateX(260px);
-    -o-transform: translateX(260px);
-    transform: translateX(260px);
-  }
-}
-
-.sidebar-menu {
-  padding: 8px 0;
-}
-
-.sidebar-menu__link {
-  display: block;
-  padding: 0 16px;
-  cursor: pointer;
-  font-size: 14px;
-  font-size: 0.875rem;
-  font-weight: 700;
-  color: #333;
-  line-height: 48px;
-  text-decoration: none;
-}
-
-.sidebar-menu__link:hover {
-  background-color: #eee;
-}
+/*.visuallyhidden*/
+  /*border 0*/
+  /*clip rect(0 0 0 0)*/
+  /*height 1px*/
+  /*margin -1px*/
+  /*overflow hidden*/
+  /*padding 0*/
+  /*position absolute*/
+  /*width 1px*/

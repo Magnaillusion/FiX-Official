@@ -1,1 +1,30 @@
-<header md-page-header="" data-ng-controller="TopbarController as vmTopbar"><div flex-item=""><div class="card bgc-indigo-500"><div class="toolbar"><button lx-ripple="" class="btn btn--l btn--white btn--icon"><i ng-click="vmTopbar.sidenav.toggleSidebar()" class="mdi mdi-menu"></i></button><span class="toolbar__label fs-title tc-white-1 ml">FiX</span><div class="toolbar__right"><lx-search-filter model="searchFilter.sixth" position="right" theme="dark" closed="" placeholder="Buscar"></lx-search-filter></div></div></div></div></header><!--div(md-header-picture="", style="background-image:url(/img/main.png)")--><md-content ng-view="" md-scroll-y="" flex="" class="md-padding ng-scope md-default-theme"><div class="doc-content ng-scope"><header class="api-profile-header"></header><div layout="row" class="api-options-bar with-icon"></div><div class="api-profile-description"><p>The<code>&#60;md-content&#62;</code>directive is a container element useful for scrollable content</p><h3 id="restrictions">Restrictions</h3><ul><li>Add the<code>md-padding</code>class to make the content padded.</li></ul></div></div></md-content>
+<header md-page-header="" data-ng-controller="TopbarController as vmTopbar">
+    <div flex-item="">
+        <div class="card bgc-indigo-500">
+            <div class="toolbar">
+                <button lx-ripple="" class="btn btn--l btn--white btn--icon"><i
+                        ng-click="vmTopbar.sidenav.toggleSidebar()" class="mdi mdi-menu"></i></button>
+                <span class="toolbar__label fs-title tc-white-1 ml">FiX</span>
+
+                <div class="toolbar__right">
+                    <lx-search-filter model="searchFilter.sixth" position="right" theme="dark" closed=""
+                                      placeholder="Buscar"></lx-search-filter>
+                </div>
+            </div>
+        </div>
+    </div>
+</header><!--div(md-header-picture="", style="background-image:url(/img/main.png)")-->
+<md-content ng-view="" md-scroll-y="" flex="" class="md-padding ng-scope md-default-theme">
+    <div class="doc-content ng-scope">
+        <header class="api-profile-header"></header>
+        <div layout="row" class="api-options-bar with-icon"></div>
+        <div class="api-profile-description"><p>The<code>&#60;md-content&#62;</code>directive is a container element
+            useful for scrollable content</p>
+
+            <h3 id="restrictions">Restrictions</h3>
+            <ul>
+                <li>Add the<code>md-padding</code>class to make the content padded.</li>
+            </ul>
+        </div>
+    </div>
+</md-content>

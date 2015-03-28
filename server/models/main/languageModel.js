@@ -7,16 +7,16 @@ var languageSchema = mongoose.Schema({
 
 var language = mongoose.model('Languages', languageSchema);
 
-function createDefaultLanguages(){
-    language.find({}).exec(function(err, collection) {
-        if(collection.length === 0) {
+function createDefaultLanguages() {
+    language.find({}).exec(function (err, collection) {
+        if (collection.length === 0) {
             language.create({
-                language:"en-us",
-                title:"Welcome to FiX, the best app to learn Physics"
+                language: "en-us",
+                title: "Welcome to FiX, the best app to learn Physics"
             });
             language.create({
-                language:"es-cr",
-                title:"Bienvenido a FiX, la mejor aplicación para aprender Física"
+                language: "es-cr",
+                title: "Bienvenido a FiX, la mejor aplicación para aprender Física"
             });
         }
     })

@@ -16,30 +16,30 @@ module.exports = function (app, config) {
         return stylus(str).set('filename', path);
     };
 
-/*
+    /*
 
-    switch (config.mode){
-        case 'production':
-            console.log('** PRODUCTION ON AZURE **');
-            console.log('serving from ' + './build/');
-            process.chdir('./../../');
-            app.use('/', express.static('./build/'));
-            break;
-        case 'stage':
-        case 'build':
-            console.log('** BUILD **');
-            console.log('serving from ' + './build/');
-            app.use('/', express.static('./build/'));
-            break;
-        default:
-            console.log('** DEV **');
-            console.log('serving from ' + './src/client/ and ./');
-            app.use('/', express.static('./src/client/'));
-            app.use('/', express.static('./'));
-            break;
-    }
+     switch (config.mode){
+     case 'production':
+     console.log('** PRODUCTION ON AZURE **');
+     console.log('serving from ' + './build/');
+     process.chdir('./../../');
+     app.use('/', express.static('./build/'));
+     break;
+     case 'stage':
+     case 'build':
+     console.log('** BUILD **');
+     console.log('serving from ' + './build/');
+     app.use('/', express.static('./build/'));
+     break;
+     default:
+     console.log('** DEV **');
+     console.log('serving from ' + './src/client/ and ./');
+     app.use('/', express.static('./src/client/'));
+     app.use('/', express.static('./'));
+     break;
+     }
 
-    */
+     */
 
 
     app.set('views', config.rootPath + '/server/views');

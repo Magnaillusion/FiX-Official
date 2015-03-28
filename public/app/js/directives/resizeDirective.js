@@ -4,7 +4,7 @@ angular.module('app').directive('resize', function ($window) {
         var w = angular.element($window);
         scope.$watch(function () {
             return {
-                'h': window.innerHeight, 
+                'h': window.innerHeight,
                 'w': window.innerWidth
             };
         }, function (newValue, oldValue) {
@@ -14,8 +14,8 @@ angular.module('app').directive('resize', function ($window) {
 
             scope.resizeWithOffset = function (offsetH) {
                 scope.$eval(attr.notifier);
-                return { 
-                    'height': (newValue.h - offsetH) + 'px'                    
+                return {
+                    'height': (newValue.h - offsetH) + 'px'
                 };
             };
 
