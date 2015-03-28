@@ -8,7 +8,7 @@
         'ui.router',
         'ngMaterial',
         'ngAnimate',
-        'ngTouch',
+        'ngTouch'
         /*
          * Our reusable cross app code modules
          */
@@ -16,7 +16,7 @@
         /*
          * 3rd Party modules
          */
-        'lumx'
+        //'lumx'
 
     ]);
 })();

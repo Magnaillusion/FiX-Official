@@ -39,13 +39,25 @@
     var app = angular
         .module('app.layout');
 
-    app.controller('AppCtrl', ['$scope', '$mdSidenav', 'muppetService', '$timeout','$log', function($scope, $mdSidenav, muppetService, $timeout, $log) {
+    app.controller('AppCtrl', ['$scope', '$mdSidenav', 'muppetService', '$timeout','$log','$mdComponentRegistry', function($scope, $mdSidenav, muppetService, $timeout, $log, $mdComponentRegistry) {
         var allMuppets = [];
 
         $scope.selected = null;
         $scope.muppets = allMuppets;
         $scope.selectMuppet = selectMuppet;
         $scope.toggleSidenav = toggleSidenav;
+
+        $scope.toggle = angular.noop;
+        $scope.isOpen = function() { return false };
+
+        $mdComponentRegistry
+            .when('left')
+            .then( function(sideNav){
+
+                $scope.isOpen = angular.bind(sideNav, sideNav.isOpen );
+                $scope.toggle = angular.bind(sideNav, sideNav.toggle );
+
+            });
 
         loadMuppets();
 
@@ -62,7 +74,8 @@
         }
 
         function toggleSidenav(name) {
-            $mdSidenav(name).toggle();
+            $mdSidenav(name).open();
+            console.log('Open');
         }
 
         function selectMuppet(muppet) {

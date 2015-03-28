@@ -1,4 +1,55 @@
-<!--div#content.disappear(layout="row", data-ng-controller="SidenavController as vmSidenav")md-sidenav.md-sidenav-left.md-whiteframe-z2(md-component-id="left", style="position: fixed; top: 0px;")
+<!--extends ../../includes/physics/layout--><!--block main-contentdiv(ng-app="sidenavDemo1", ng-controller="AppCtrl", layout="column", layout-fill="")
+    section(layout="row", flex="")
+        md-sidenav.md-sidenav-left.md-whiteframe-z2(md-component-id="left", md-is-locked-open="$media('gt-md')")
+            md-toolbar.md-theme-indigo
+                h1.md-toolbar-tools Sidenav Left
+            md-content.md-padding(ng-controller="LeftCtrl")
+                md-button.md-primary(ng-click="close()", hide-gt-md="")
+                    | Close Sidenav Left
+                p(hide-md="", show-gt-md="")
+                    | This sidenav is locked open on your device. To go back to the default behavior,
+                    | narrow your display.
+                p
+                    | The "right" sideNav is open = {{isOpen()}}
+        md-content.md-padding(flex="")
+            div(layout="column", layout-fill="", layout-align="center center")
+                p
+                    | The left sidenav will "lock open" on a medium (&#62;=960px wide) device.
+                div
+                    md-button.md-primary(ng-click="toggleLeft()", hide-gt-md="")
+                        | Toggle left
+                div
+                    md-button.md-primary(ng-click="toggle()")
+                        | Toggle right
+        md-sidenav.md-sidenav-right.md-whiteframe-z2(md-component-id="right")
+            md-toolbar.md-theme-light
+                h1.md-toolbar-tools Sidenav Right
+            md-content.md-padding(ng-controller="RightCtrl")
+                md-button.md-primary(ng-click="close()")
+                    | Close Sidenav Right
+//.bodyContent(layout="column", ng-controller="AppCtrl")
+    md-toolbar(layout="row", ng-click="toggleSidenav('left')")
+        button.menuBtn(hide-gt-sm="")
+            //span.visuallyhidden Menu
+            i.ion-android-arrow-back
+        h1.md-toolbar-tools(layout-align-gt-sm="center")
+            | The "left" sideNav is open = {{ isOpen() }}
+    .content-wrapper(layout="row", flex="")
+        md-sidenav.md-sidenav-left.md-whiteframe-z2(layout="column", md-component-id="left")
+            md-list.muppet-list
+                md-item(ng-repeat="it in muppets")
+                    md-item-content
+                        md-button(ng-click="selectMuppet(it)", ng-class="{'selected' : it === selected }")
+                            img.face(ng-src="{{it.iconurl}}", alt="")
+                            | {{it.name}}
+        #primary-col.content-wrapper(layout="column", flex="")
+            md-content.md-padding(layout="column", flex="")
+                h2 {{selected.name}}
+                p {{selected.content}}
+                .cell
+                    img(ng-src="{{selected.imgurl}}", alt="{{selected.imgalt}}")
+
+--><!--div#content.disappear(layout="row", data-ng-controller="SidenavController as vmSidenav")md-sidenav.md-sidenav-left.md-whiteframe-z2(md-component-id="left", style="position: fixed; top: 0px;")
     md-toolbar
         h2.md-toolbar-tools()
             span FiX
