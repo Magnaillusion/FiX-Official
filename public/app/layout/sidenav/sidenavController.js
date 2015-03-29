@@ -8,7 +8,7 @@
     SidenavController.$inject = ['$scope', '$timeout', '$mdSidenav', '$log', 'sidenavFactory'];
 
     /* @ngInject */
-    function SidenavController($scope, $timeout, $mdSidenav, $log, sidenavFactory) {
+    function SidenavController($scope, $timeout, $mdSidenav, $log) {
         /* jshint validthis: true */
         var vm = this;
         vm.title = 'SidenavController';
@@ -17,7 +17,7 @@
 
         function toggleSidenav(menuId) {
             // Open the given sidenav
-            $mdSidenav(menuId).open()
+            $mdSidenav(menuId).toggle()
                 .then(function () {
                     console.log("open " + menuId + " is done");
                 });
