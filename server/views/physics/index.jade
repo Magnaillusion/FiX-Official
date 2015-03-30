@@ -28,7 +28,7 @@ html(ng-app="app")
 
                     div(ng-controller="gridListDemoCtrl as vm", flex="")
                         md-grid-list(md-cols-sm="1", md-cols-md="2", md-cols-gt-md="6", md-row-height-gt-md="1:1", md-row-height="4:3", md-gutter="8px", md-gutter-gt-sm="4px")
-                            md-grid-tile(ng-repeat="tile in vm.tiles", md-rowspan="{{tile.span.row}}", md-colspan="{{tile.span.col}}", ng-class="tile.background")
+                            md-grid-tile(ng-repeat="tile in vm.tiles", ng-class="tile.background")
                                 //md-icon(md-svg-icon="{{tile.icon}}")
                                 md-grid-tile-footer
                                     h3 {{tile.title}}
@@ -43,7 +43,7 @@ html(ng-app="app")
         //script(src="//ajax.googleapis.com/ajax/libs/angular_material/0.8.3/angular-material.js")
 
 
-        script(type="text/javascript", src="/vendor/jquery/dist/jquery.js")
+        //script(type="text/javascript", src="/vendor/jquery/dist/jquery.js")
         //script(type="text/javascript", src="/vendor/velocity/velocity.js")
         //script(type="text/javascript", src="/vendor/moment/min/moment-with-locales.js")
         script(type="text/javascript", src="/vendor/angular/angular.js")
