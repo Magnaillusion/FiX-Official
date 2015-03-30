@@ -10,8 +10,8 @@ html(ng-app="app")
         meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no')
 
     body(layout="column", ng-controller="SidenavController as vmSidenav")
-        md-toolbar(layout="row")
-            button.menuBtn(ng-click="vmSidenav.toggleSidenav('left')", hide-gt-sm="")
+        md-toolbar(ng-click="vmSidenav.toggleSidenav('left')", layout="row")
+            button.menuBtn(hide-gt-sm="")
                 i.mdi.mdi-menu
             h1.md-toolbar-tools(layout-align-gt-sm="center") FiX
         .content-wrapper(layout="row", flex="")
